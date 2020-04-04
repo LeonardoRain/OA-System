@@ -7,18 +7,12 @@ import { ManagementComponent } from './management/management.component';
 
 const routes: Routes = [
   {
-    path: 'userManagement',
-    component: UserManagementComponent,
-    children: [
-      {
-        path: 'userRegister',
-        component: UserRegisterComponent
-      },
-      {
-        path: 'management',
-        component: ManagementComponent
-      }
-    ]
+    path: 'userRegister',
+    component: UserRegisterComponent
+  },
+  {
+    path: 'management',
+    component: ManagementComponent
   }
 ];
 

@@ -8,22 +8,38 @@ import { DemoComponent } from '../pages/demo/demo.component';
 
 
 const routes: Routes = [
+  // {
+  //   path: 'home',
+  //   children: [
+  //     {
+  //       path: 'welcome',
+  //       component: WelcomeComponent
+  //     },
+  //     {
+  //       path: 'userManagement',
+  //       loadChildren: () => import('../pages/user-management/user-management.module').then(module => module.UserManagementModule),
+  //     },
+  //     {
+  //       path: 'demo',
+  //       loadChildren: () => import('../pages/demo/demo.module').then(module => module.DemoModule),
+  //     }
+  //   ]
+  // },
   {
-    path: 'home',
-    children: [
-      {
-        path: 'welcome',
-        component: WelcomeComponent
-      },
-      {
-        path: 'userManagement',
-        loadChildren: () => import('../pages/user-management/user-management.module').then(module => module.UserManagementModule),
-      },
-      {
-        path: 'demo',
-        loadChildren: () => import('../pages/demo/demo.module').then(module => module.DemoModule),
-      }
-    ]
+    path: '',
+    component: HomeComponent
+  },
+  {
+    path: 'welcome',
+    component: WelcomeComponent
+  },
+  {
+    path: 'userManagement',
+    loadChildren: () => import('../pages/user-management/user-management.module').then(module => module.UserManagementModule),
+  },
+  {
+    path: 'demo',
+    loadChildren: () => import('../pages/demo/demo.module').then(module => module.DemoModule),
   },
   {
     path: '**',
