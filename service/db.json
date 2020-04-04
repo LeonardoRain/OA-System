@@ -1,10 +1,15 @@
 {
-  "users": [{
-      "employeeNumber": 20200001,
+  "userList": [],
+  "users": [
+    {
+      "id": 20200001,
       "nickname": "Leonardo",
       "department": "IOC",
-      "privilege": ["账号管理", "表单管理"],
-      "userName": "LeonardoTest",
+      "privilege": [
+        "账号管理",
+        "表单管理"
+      ],
+      "username": "Leonardo_Test",
       "password": "12345678",
       "email": "987654321@qq.com",
       "phoneNumberPrefix": "+86",
@@ -12,11 +17,14 @@
       "agree": true
     },
     {
-      "employeeNumber": 20200002,
+      "id": 20200002,
       "nickname": "Jessica",
       "department": "IOC",
-      "privilege": ["账号管理", "表单管理"],
-      "userName": "JessicaTest",
+      "privilege": [
+        "账号管理",
+        "表单管理"
+      ],
+      "username": "Jessica_Test",
       "password": "12345678",
       "email": "649134515@qq.com",
       "phoneNumberPrefix": "+86",
@@ -24,11 +32,14 @@
       "agree": true
     },
     {
-      "employeeNumber": 20200003,
+      "id": 20200003,
       "nickname": "Neo",
       "department": "IOC",
-      "privilege": ["账号管理", "表单管理"],
-      "userName": "NeoTest",
+      "privilege": [
+        "账号管理",
+        "表单管理"
+      ],
+      "username": "Neo_Test",
       "password": "12345678",
       "email": "159415466@qq.com",
       "phoneNumberPrefix": "+86",
@@ -36,11 +47,14 @@
       "agree": true
     },
     {
-      "employeeNumber": 20200004,
+      "id": 20200004,
       "nickname": "Tim",
       "department": "IOC",
-      "privilege": ["账号管理", "表单管理"],
-      "userName": "TimTest",
+      "privilege": [
+        "账号管理",
+        "表单管理"
+      ],
+      "username": "Tim_Test",
       "password": "12345678",
       "email": "892615878@qq.com",
       "phoneNumberPrefix": "+86",
@@ -48,15 +62,219 @@
       "agree": true
     },
     {
-      "employeeNumber": 20200005,
+      "id": 20200005,
       "nickname": "Jacky",
       "department": "IOC",
-      "privilege": ["账号管理", "表单管理"],
-      "userName": "JackyTest",
+      "privilege": [
+        "账号管理",
+        "表单管理"
+      ],
+      "username": "Jacky_Test",
       "password": "12345678",
       "email": "679223168@qq.com",
       "phoneNumberPrefix": "+86",
       "phoneNumber": "15900000005",
+      "agree": true
+    },
+    {
+      "id": 20200006,
+      "nickname": "Robbin",
+      "department": "IOC",
+      "privilege": [
+        "账号管理",
+        "表单管理"
+      ],
+      "username": "Robbin_Test",
+      "password": "12345678",
+      "email": "854632158@qq.com",
+      "phoneNumberPrefix": "+86",
+      "phoneNumber": "15900000006",
+      "agree": true
+    },
+    {
+      "id": 20200007,
+      "nickname": "Cory",
+      "department": "IOC",
+      "privilege": [
+        "账号管理",
+        "表单管理"
+      ],
+      "username": "Cory_Test",
+      "password": "12345678",
+      "email": "94164854@qq.com",
+      "phoneNumberPrefix": "+86",
+      "phoneNumber": "15900000007",
+      "agree": true
+    },
+    {
+      "id": 20200008,
+      "nickname": "Lionel",
+      "department": "IOC",
+      "privilege": [
+        "账号管理",
+        "表单管理"
+      ],
+      "username": "Lionel_Test",
+      "password": "12345678",
+      "email": "965745813@qq.com",
+      "phoneNumberPrefix": "+86",
+      "phoneNumber": "15900000008",
+      "agree": true
+    },
+    {
+      "id": 20200009,
+      "nickname": "Roderick",
+      "department": "IOC",
+      "privilege": [
+        "账号管理",
+        "表单管理"
+      ],
+      "username": "Roderick_Test",
+      "password": "12345678",
+      "email": "15368429@qq.com",
+      "phoneNumberPrefix": "+86",
+      "phoneNumber": "15900000009",
+      "agree": true
+    },
+    {
+      "id": 202000010,
+      "nickname": "Aps",
+      "department": "IOC",
+      "privilege": [
+        "账号管理",
+        "表单管理"
+      ],
+      "username": "Aps_Test",
+      "password": "12345678",
+      "email": "125478563@qq.com",
+      "phoneNumberPrefix": "+86",
+      "phoneNumber": "15900000010",
+      "agree": true
+    },
+    {
+      "id": 20200011,
+      "nickname": "Benny",
+      "department": "IOC",
+      "privilege": [
+        "账号管理",
+        "表单管理"
+      ],
+      "username": "Benny_Test",
+      "password": "12345678",
+      "email": "41257695@qq.com",
+      "phoneNumberPrefix": "+86",
+      "phoneNumber": "15900000011",
+      "agree": true
+    },
+    {
+      "id": 20200012,
+      "nickname": "Bart",
+      "department": "IOC",
+      "privilege": [
+        "账号管理",
+        "表单管理"
+      ],
+      "username": "Bart_Test",
+      "password": "12345678",
+      "email": "247516856@qq.com",
+      "phoneNumberPrefix": "+86",
+      "phoneNumber": "15900000012",
+      "agree": true
+    },
+    {
+      "id": 20200013,
+      "nickname": "Cora",
+      "department": "IOC",
+      "privilege": [
+        "账号管理",
+        "表单管理"
+      ],
+      "username": "Cora_Test",
+      "password": "12345678",
+      "email": "85369524@qq.com",
+      "phoneNumberPrefix": "+86",
+      "phoneNumber": "15900000013",
+      "agree": true
+    },
+    {
+      "id": 20200014,
+      "nickname": "Vince",
+      "department": "IOC",
+      "privilege": [
+        "账号管理",
+        "表单管理"
+      ],
+      "username": "Vince_Test",
+      "password": "12345678",
+      "email": "965412563@qq.com",
+      "phoneNumberPrefix": "+86",
+      "phoneNumber": "15900000014",
+      "agree": true
+    },
+    {
+      "id": 20200066,
+      "nickname": "Leo",
+      "department": "IOC",
+      "privilege": [
+        "账号管理",
+        "表单管理"
+      ],
+      "username": "Leo_Test",
+      "password": "12345678",
+      "email": "987654321@qq.com",
+      "phoneNumberPrefix": "+86",
+      "phoneNumber": "15900000066",
+      "agree": true
+    },
+    {
+      "id": 20200088,
+      "nickname": "Rose",
+      "department": "IOC",
+      "privilege": [
+        "账号管理",
+        "表单管理"
+      ],
+      "username": "Rose_Test",
+      "password": "12345678",
+      "email": "Rose@qq.com",
+      "phoneNumberPrefix": "+86",
+      "phoneNumber": "15900000088",
+      "agree": true
+    },
+    {
+      "id": 20200089,
+      "nickname": "Koa",
+      "department": null,
+      "privilege": null,
+      "username": "Koa_Test",
+      "password": "12345678",
+      "email": "Koa@qq.com",
+      "phoneNumberPrefix": "+86",
+      "phoneNumber": "15900000089",
+      "agree": true
+    },
+    {
+      "id": 20200044,
+      "nickname": "Usb",
+      "department": null,
+      "privilege": null,
+      "username": "Usb_Test",
+      "password": "12345678",
+      "email": "lhd295497522@sina.com",
+      "phoneNumberPrefix": "+86",
+      "phoneNumber": "12342134214",
+      "agree": true
+    },
+    {
+      "id": 20200055,
+      "nickname": "Pony",
+      "department": null,
+      "privilege": null,
+      "username": "Pony_Test",
+      "password": "12345678",
+      "email": "m13597885731@163.com",
+      "phoneNumberPrefix": "+86",
+      "phoneNumber": "12342134214",
       "agree": true
     }
   ]

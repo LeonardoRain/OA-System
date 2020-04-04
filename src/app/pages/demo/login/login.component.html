@@ -1,14 +1,16 @@
 <nz-divider nzText="Please Sign In OA System !" nzOrientation="left"></nz-divider>
-<form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
+<form nz-form [formGroup]="loginForm" class="login-form" (ngSubmit)="submitForm()">
   <nz-form-item>
-    <nz-form-control nzErrorTip="Please input your username!">
+    <!-- <p>Username: {{loginForm.value.username}}</p>
+    <p>Password: {{loginForm.value.password}}</p> -->
+    <nz-form-control nzErrorTip="账号不可为空!">
       <nz-input-group nzPrefixIcon="user">
-        <input type="text" nz-input formControlName="userName" placeholder="请输入您的账号" />
+        <input type="text" nz-input formControlName="username" placeholder="请输入您的账号" />
       </nz-input-group>
     </nz-form-control>
   </nz-form-item>
   <nz-form-item>
-    <nz-form-control nzErrorTip="Please input your Password!">
+    <nz-form-control nzErrorTip="密码不可为空且至少为8位!">
       <nz-input-group nzPrefixIcon="lock">
         <input type="password" nz-input formControlName="password" placeholder="请输入您的密码" />
       </nz-input-group>
@@ -20,7 +22,8 @@
         <span>记住我</span>
       </label>
       <a class="login-form-forgot" class="login-form-forgot">忘记密码？</a>
-      <button nz-button class="login-form-button" [nzType]="'primary'">登陆</button>
+      <button nz-button class="login-form-button" [nzType]="'primary'" [disabled]="!loginForm.valid"
+        (click)="onSubmit()">登陆</button>
       或者
       <a>现在注册！</a>
     </nz-form-control>

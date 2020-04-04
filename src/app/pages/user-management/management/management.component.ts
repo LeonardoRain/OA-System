@@ -1,22 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-
-interface ItemData {
-  name: string;
-  age: number | string;
-  address: string;
-  checked: boolean;
-  expand: boolean;
-  description: string;
-  disabled?: boolean;
-}
+import { User } from '../../models/user.model';
+import { UserService } from '../../../services/user.service';
 
 interface UserData {
-  account: string;      // 用户名
-  name: string;         // 姓名
-  gender: string;       // 性别
-  department: string;   // 所在部门
-  phone: number;        // 电话
-  email: string;        // 邮箱
+  id: number;     // 员工编号
+  nickname: string;           // 姓名
+  department: string;         // 所在部门
+  privilege: string[];        // 员工权限
+  username: string;           // 用户名
+  password: string;           // 密码
+  email: string;              // 邮箱
+  phoneNumberPrefix: string;  // 电话前缀
+  phoneNumber: number;        // 电话
+  agree?: boolean;            // 同意
   checked: boolean;
   expand: boolean;
   description: string;
@@ -28,9 +24,15 @@ interface UserData {
   templateUrl: './management.component.html',
   styleUrls: ['./management.component.css']
 })
+
+// 组件主体
 export class ManagementComponent implements OnInit {
-  listOfData: UserData[] = [];
-  displayData: UserData[] = [];
+  public users: User[];
+  public dataBefore: any[];
+  public dataAfter: any[];
+
+  listOfData: (User & { description: string; checked: boolean; expand: boolean; disabled: boolean; })[];
+  displayData: any[];
   bordered = true;
   loading = false;
   sizeChanger = false;
@@ -47,6 +49,8 @@ export class ManagementComponent implements OnInit {
   simple = false;
   noResult = false;
   position = 'bottom';
+
+  constructor(private userService: UserService) { }
 
   currentPageDataChange($event: UserData[]): void {
     this.displayData = $event;
@@ -71,19 +75,21 @@ export class ManagementComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    for (let i = 1; i <= 9; i++) {
-      this.listOfData.push({
-        account: `202000${i}`,
-        name: 'Leonardo Rain',
-        gender: '男',
-        department: 'IOC',  // 所在部门
-        phone: +`1590000000${i}`,  // 电话
-        email: `202000${i}@wx.com`,        // 邮箱
-        description: `My name is John Brown, I am ${i}2 years old, living in New York No. ${i} Lake Park.`,
-        checked: false,
-        expand: false
+    const users$ = this.userService.index();
+    users$.subscribe((data: User[]) => {
+      this.dataBefore = data;
+      this.dataAfter = [];
+      // console.log(this.dataBefore);
+      this.dataBefore.map(user => {
+        this.dataAfter.push(Object.assign({}, user, {
+          description: '广州市玄武无线科技股份有限公司',
+          checked: false,
+          expand: false,
+          disabled: false
+        }));
       });
-    }
+      this.listOfData = this.dataAfter;
+    });
   }
 
   noResultChange(status: boolean): void {

@@ -1,15 +1,15 @@
 <nz-divider nzText="User Register" nzOrientation="left"></nz-divider>
-<form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+<form nz-form [formGroup]="userRegisterForm" (ngSubmit)="submitForm()">
   <!-- 员工编号 -->
   <nz-form-item>
-    <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="employeeNumber" nzRequired>
+    <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="id" nzRequired>
       <span>
         员工编号
         <i nz-icon nz-tooltip nzTitle="员工编号唯一且为数字" nzType="question-circle" nzTheme="outline"></i>
       </span>
     </nz-form-label>
     <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="请输入员工编号！">
-      <input nz-input type="number" id="employeeNumber" formControlName="employeeNumber" />
+      <input nz-input type="number" id="id" formControlName="id" />
     </nz-form-control>
   </nz-form-item>
   <!-- 员工姓名 -->
@@ -29,21 +29,21 @@
   <nz-form-item>
     <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="department" nzRequired>所在部门</nz-form-label>
     <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="请选择员工所在部门！">
-      <app-department-select formControlName="department"></app-department-select>
+      <app-department-select ngDefaultControl [getDepartment]="getDepartment"></app-department-select>
     </nz-form-control>
   </nz-form-item>
   <!-- 员工权限 -->
   <nz-form-item>
     <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="department" nzRequired>员工权限</nz-form-label>
     <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="请选择员工权限！">
-      <app-privilege-select formControlName="privilege"></app-privilege-select>
+      <app-privilege-select ngDefaultControl [privilege]="'privilege'"></app-privilege-select>
     </nz-form-control>
   </nz-form-item>
   <!-- 员工账号 -->
   <nz-form-item>
     <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired>员工账号</nz-form-label>
     <nz-form-control [nzSm]="14" [nzXs]="24" nzHasFeedback nzValidatingTip="验证中..." [nzErrorTip]="userErrorTpl">
-      <input nz-input formControlName="userName" placeholder="请输入员工账号" />
+      <input nz-input formControlName="username" placeholder="请输入员工账号" />
       <ng-template #userErrorTpl let-control>
         <ng-container *ngIf="control.hasError('required')">
           员工账号是必需的！
@@ -57,23 +57,21 @@
   <!-- 员工密码 -->
   <nz-form-item>
     <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="password" nzRequired>员工密码</nz-form-label>
-    <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="请输入员工密码！">
-      <input nz-input type="password" id="password" placeholder="请输入员工密码" formControlName="password"
-        (ngModelChange)="updateConfirmValidator()" />
+    <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="请输入至少8位的员工密码！">
+      <input nz-input type="password" id="password" placeholder="请输入员工密码" formControlName="password" />
     </nz-form-control>
   </nz-form-item>
   <!-- 邮箱 -->
   <nz-form-item>
     <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="email">邮箱</nz-form-label>
-    <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="必须输入一个合法的邮箱！">
+    <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="请输入一个合法的邮箱！">
       <input nz-input formControlName="email" id="email" />
     </nz-form-control>
   </nz-form-item>
   <!-- 员工手机号 -->
   <nz-form-item>
     <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="phoneNumber" nzRequired>员工手机号</nz-form-label>
-    <nz-form-control [nzSm]="14" [nzXs]="24" [nzValidateStatus]="validateForm.controls['phoneNumber']"
-      nzErrorTip="请输入员工的手机号">
+    <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="请输入正确的手机号(11位长度)">
       <nz-input-group [nzAddOnBefore]="addOnBeforeTemplate">
         <ng-template #addOnBeforeTemplate>
           <nz-select formControlName="phoneNumberPrefix" class="phone-select">
@@ -96,8 +94,8 @@
   </nz-form-item>
   <nz-form-item nz-row class="register-area">
     <nz-form-control [nzSpan]="14" [nzOffset]="6">
-      <!-- <button nz-button nzType="primary" [disabled]="!validateForm.valid">确认注册</button> -->
-      <button nz-button nzType="primary">确认注册</button>
+      <button nz-button nzType="primary" [disabled]="!userRegisterForm.valid" (click)="onSubmit()">确认注册</button>
+      <!-- <button nz-button nzType="primary" (click)="onSubmit()">确认注册</button> -->
       <button nz-button (click)="resetForm($event)">重置表单</button>
     </nz-form-control>
   </nz-form-item>

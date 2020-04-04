@@ -7,10 +7,11 @@ import { DemoRoutingModule } from './demo-routing.module';
 import { DemoComponent } from './demo.component';
 import { LoginComponent } from './login/login.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 @NgModule({
-  declarations: [DemoComponent, LoginComponent, ChangePasswordComponent],
+  declarations: [DemoComponent, LoginComponent, ChangePasswordComponent, PageNotFoundComponent],
   imports: [
     CommonModule,
     DemoRoutingModule,

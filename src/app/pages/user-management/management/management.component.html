@@ -95,6 +95,7 @@
     </nz-form-item>
   </form>
 </div>
+<!-- <p>{{listOfData.username}}</p> -->
 <nz-table #dynamicTable [nzScroll]="fixHeader ? { y: '240px' } : null" [nzData]="listOfData" [nzBordered]="bordered"
   [nzSimple]="simple" [nzLoading]="loading" [nzPaginationPosition]="position" [nzShowSizeChanger]="sizeChanger"
   [nzFrontPagination]="pagination" [nzShowPagination]="pagination" [nzFooter]="footer ? '附加功能' : null"
@@ -104,11 +105,12 @@
       <th nzWidth="50px" nzShowExpand *ngIf="expandable"></th>
       <th nzWidth="75px" nzShowCheckbox *ngIf="checkbox" [(nzChecked)]="allChecked" [nzIndeterminate]="indeterminate"
         (nzCheckedChange)="checkAll($event)"></th>
-      <!-- 用户名  姓名  性别  所在部门  电话  邮箱 -->
-      <th nzWidth="100px">用 户 名</th>
+      <!-- 用户名  姓名  拥有权限  所在部门  电话  邮箱 -->
+      <th nzWidth="150px">员 工 编 号</th>
+      <th nzWidth="150px">用 户 名</th>
       <th nzWidth="150px">姓 名</th>
-      <th nzWidth="75px">性 别</th>
-      <th>所 在 部 门</th>
+      <th nzWidth="100px">所 在 部 门</th>
+      <th>拥 有 权 限</th>
       <th nzWidth="150px">电 话</th>
       <th nzWidth="150px">邮 箱</th>
     </tr>
@@ -118,11 +120,12 @@
       <tr>
         <td nzShowExpand *ngIf="expandable" [(nzExpand)]="data.expand"></td>
         <td nzShowCheckbox *ngIf="checkbox" [(nzChecked)]="data.checked" (nzCheckedChange)="refreshStatus()"></td>
-        <td>{{ data.account }}</td>
-        <td>{{ data.name }}</td>
-        <td>{{ data.gender }}</td>
+        <td>{{ data.id }}</td>
+        <td>{{ data.username }}</td>
+        <td>{{ data.nickname }}</td>
         <td>{{ data.department }}</td>
-        <td>{{ data.phone }}</td>
+        <td>{{ data.privilege }}</td>
+        <td>{{ data.phoneNumber }}</td>
         <td>{{ data.email }}</td>
       </tr>
       <tr [nzExpand]="data.expand && expandable">

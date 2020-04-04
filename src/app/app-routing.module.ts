@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { PageNotFoundComponent } from './pages/demo/page-not-found/page-not-found.component';
+// import { LoginComponent } from './pages/demo/login/login.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'welcome' },
@@ -8,6 +10,14 @@ const routes: Routes = [
   {
     path: 'userManagement',
     loadChildren: () => import('./pages/user-management/user-management.module').then(m => m.UserManagementModule)
+  },
+  // {
+  //   path: 'login',
+  //   component: LoginComponent
+  // },
+  {
+    path: '**',
+    component: PageNotFoundComponent
   }
 ];
 
