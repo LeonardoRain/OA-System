@@ -12,7 +12,7 @@ const routes: Routes = [
     children: [
       {
         path: 'welcome',
-        component: WelcomeComponent,
+        loadChildren: () => import('../pages/welcome/welcome.module').then(module => module.WelcomeModule),
       },
       {
         path: 'userManagement',

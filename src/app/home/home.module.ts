@@ -8,14 +8,9 @@ import { IconsProviderModule } from './icons-provider.module';
 import { NgZorroAntdModule, NZ_I18N, zh_CN } from 'ng-zorro-antd';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { registerLocaleData } from '@angular/common';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import zh from '@angular/common/locales/zh';
-import { PageNotFoundComponent } from '../pages/demo/page-not-found/page-not-found.component';
-import { WelcomeComponent } from '../pages/welcome/welcome.component';
-import { UserManagementComponent } from '../pages/user-management/user-management.component';
-import { DemoComponent } from '../pages/demo/demo.component';
 
 
 registerLocaleData(zh);

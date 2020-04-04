@@ -8,6 +8,7 @@ import { DemoComponent } from './demo.component';
 import { LoginComponent } from './login/login.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { WelcomeModule } from '../welcome/welcome.module';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     CommonModule,
     NgZorroAntdModule,
     ReactiveFormsModule,
-    DemoRoutingModule
+    DemoRoutingModule,
+    WelcomeModule
   ]
 })
 export class DemoModule { }

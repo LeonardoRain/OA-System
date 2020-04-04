@@ -10,10 +10,10 @@ const routes: Routes = [
     path: '',
     component: DemoComponent
   },
-  {
-    path: 'login',
-    component: LoginComponent
-  },
+  // {
+  //   path: 'login',
+  //   component: LoginComponent
+  // },
   {
     path: 'changePassword',
     component: ChangePasswordComponent

@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.less']
 })
 export class LoginComponent implements OnInit {
   public users: User[];
@@ -55,7 +55,7 @@ export class LoginComponent implements OnInit {
     });
     if (flag) {
       console.log('登陆成功！');
-      this.router.navigate(['./welcome']);
+      this.router.navigate(['./home/welcome']);
     } else {
       alert('用户名或密码错误！');
     }

@@ -5,17 +5,17 @@ import { WelcomeRoutingModule } from './welcome-routing.module';
 import { WelcomeComponent } from './welcome.component';
 import { NgZorroAntdModule } from 'ng-zorro-antd';
 import { ReactiveFormsModule } from '@angular/forms';
-import { PageHeaderComponent } from './page-header/page-header.component';
 import { DividerComponent } from './divider/divider.component';
+import { PageHeaderContentComponent } from './page-header-content/page-header-content.component';
 
 
 @NgModule({
   imports: [
-    WelcomeRoutingModule,
     NgZorroAntdModule,
     ReactiveFormsModule,
+    WelcomeRoutingModule
   ],
-  declarations: [WelcomeComponent, PageHeaderComponent, DividerComponent],
-  exports: [WelcomeComponent, PageHeaderComponent, DividerComponent]
+  declarations: [WelcomeComponent, DividerComponent, PageHeaderContentComponent],
+  exports: [DividerComponent, PageHeaderContentComponent]
 })
 export class WelcomeModule { }
