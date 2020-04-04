@@ -1,11 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { UserManagementComponent } from './user-management.component';
 import { UserRegisterComponent } from './user-register/user-register.component';
 import { ManagementComponent } from './management/management.component';
+import { UserManagementComponent } from './user-management.component';
 
 
 const routes: Routes = [
+  {
+    path: '',
+    component: UserManagementComponent
+  },
   {
     path: 'userRegister',
     component: UserRegisterComponent
