@@ -11,22 +11,28 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { registerLocaleData } from '@angular/common';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import zh from '@angular/common/locales/zh';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+import { WelcomeComponent } from './pages/welcome/welcome.component';
+
 
 registerLocaleData(zh);
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     IconsProviderModule,
     NgZorroAntdModule,
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    NzIconModule
+    NzIconModule,
+    AppRoutingModule,
   ],
   providers: [{ provide: NZ_I18N, useValue: zh_CN }],
   bootstrap: [AppComponent]

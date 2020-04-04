@@ -14,9 +14,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
   declarations: [DemoComponent, LoginComponent, ChangePasswordComponent, PageNotFoundComponent],
   imports: [
     CommonModule,
-    DemoRoutingModule,
     NgZorroAntdModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    DemoRoutingModule
   ]
 })
 export class DemoModule { }

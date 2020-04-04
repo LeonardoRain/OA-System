@@ -16,6 +16,6 @@ import { DividerComponent } from './divider/divider.component';
     ReactiveFormsModule,
   ],
   declarations: [WelcomeComponent, PageHeaderComponent, DividerComponent],
-  exports: [WelcomeComponent, PageHeaderComponent]
+  exports: [WelcomeComponent, PageHeaderComponent, DividerComponent]
 })
 export class WelcomeModule { }
