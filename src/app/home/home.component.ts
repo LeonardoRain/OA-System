@@ -17,6 +17,8 @@ export class HomeComponent implements OnInit {
   isCollapsed = false;
   isLoading = false;
   CurrentUser: User;
+  departmentPrivilege = false;
+  formPrivilege = false;
 
   constructor(
     private router: Router,
@@ -24,7 +26,9 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    // 得到当前用户
     this.CurrentUser = JSON.parse(localStorage.getItem('currentUser'));
+    // 判断时间
     this.hourNow = new Date().getHours();
     if (this.hourNow < 6) {
       this.greet = '凌晨好，';
@@ -43,6 +47,14 @@ export class HomeComponent implements OnInit {
     } else {
       this.greet = '夜里好，';
     }
+    // 判断权限，对应显示
+    if (this.CurrentUser.privilege.indexOf('用户管理') !== -1) {
+      this.departmentPrivilege = true;
+    }
+    if (this.CurrentUser.privilege.indexOf('表单管理') !== -1) {
+      this.formPrivilege = true;
+    }
+
   }
 
   // 退出登陆

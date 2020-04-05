@@ -30,9 +30,8 @@ export class AuthGuard implements CanActivate, CanActivateChild {
       return true;
     } else {
       alert('您暂无此权限，请联系管理员获取！');
+      this.router.navigate(['/home/welcome']);
       return false;
     }
   }
-
-
 }

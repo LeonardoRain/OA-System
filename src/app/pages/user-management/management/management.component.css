@@ -6,3 +6,16 @@
   margin-right: 16px;
   margin-bottom: 8px;
 }
+
+nz-table th {
+  text-align: center !important;
+}
+
+td {
+  text-align: center;
+}
+
+.search {
+  float: right;
+  margin-top: 5px;
+}

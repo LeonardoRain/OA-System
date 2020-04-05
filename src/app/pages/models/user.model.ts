@@ -2,6 +2,7 @@ export class User {
   constructor(
     public id: number,
     public nickname: string,
+    public gender: string,
     public department: string,
     public privilege: string[],
     public username: string,

@@ -24,19 +24,25 @@
       <input nz-input id="nickname" formControlName="nickname" />
     </nz-form-control>
   </nz-form-item>
-  <!-- 部门 -->
-  <!-- 职位 -->
+  <!-- 性别 -->
+  <nz-form-item>
+    <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="gender" nzRequired>性别</nz-form-label>
+    <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="请选择性别！">
+      <app-gender-select formControlName="gender" ngDefaultControl></app-gender-select>
+    </nz-form-control>
+  </nz-form-item>
+  <!-- 部门及职位 -->
   <nz-form-item>
     <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="department" nzRequired>所在部门</nz-form-label>
     <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="请选择员工所在部门！">
-      <app-department-select ngDefaultControl [getDepartment]="getDepartment"></app-department-select>
+      <app-department-select ngDefaultControl formControlName="department"></app-department-select>
     </nz-form-control>
   </nz-form-item>
   <!-- 员工权限 -->
   <nz-form-item>
     <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="department" nzRequired>员工权限</nz-form-label>
     <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="请选择员工权限！">
-      <app-privilege-select ngDefaultControl [privilege]="'privilege'"></app-privilege-select>
+      <app-privilege-select ngDefaultControl formControlName="privilege"></app-privilege-select>
     </nz-form-control>
   </nz-form-item>
   <!-- 员工账号 -->

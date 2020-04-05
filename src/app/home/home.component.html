@@ -17,21 +17,18 @@
         </ul>
       </li>
       <!-- 个人中心 ： 原Demo -->
-      <li nz-submenu nzTitle="个人中心" nzIcon="experiment">
+      <li nz-submenu nzTitle="个人中心" nzIcon="radar-chart">
         <ul>
           <li nz-menu-item nzMatchRouter>
             <a routerLink="/home/demo">个人中心</a>
           </li>
-          <!-- <li nz-menu-item nzMatchRouter>
-            <a routerLink="/home/demo/login">登陆</a>
-          </li> -->
           <li nz-menu-item nzMatchRouter>
             <a routerLink="/home/demo/changePassword">修改密码</a>
           </li>
         </ul>
       </li>
       <!-- 用户管理 -->
-      <li nz-submenu nzTitle="用户管理" nzIcon="team">
+      <li nz-submenu nzTitle="用户管理" nzIcon="team" *ngIf="departmentPrivilege">
         <ul>
           <li nz-menu-item nzMatchRouter>
             <a routerLink="/home/userManagement/management">账号管理</a>
@@ -42,16 +39,16 @@
         </ul>
       </li>
       <!-- 表单管理 -->
-      <li nz-submenu nzTitle="表单管理" nzIcon="idcard">
+      <li nz-submenu nzTitle="表单管理" nzIcon="idcard" *ngIf="formPrivilege">
         <ul>
           <li nz-menu-item nzMatchRouter>
-            <a>表单审核</a>
+            <a routerLink="/home/forms/formAudit">表单审核</a>
           </li>
           <li nz-menu-item nzMatchRouter>
-            <a>表单处理</a>
+            <a routerLink="/home/forms/formDeal">表单处理</a>
           </li>
           <li nz-menu-item nzMatchRouter>
-            <a>表单审批</a>
+            <a routerLink="/home/forms/formApproval">表单审批</a>
           </li>
         </ul>
       </li>
@@ -67,9 +64,11 @@
         <button nz-button nzType="primary" (click)="logout()" [nzLoading]="isLoading">
           <i nz-icon nzType="poweroff"></i>退出登陆
         </button>
+        <app-avatar></app-avatar>
         <span class="greeting">
-          {{greet}}<a class="greeting_name">{{CurrentUser.nickname}}</a>
+          <a class="greeting_name">{{CurrentUser.nickname}}</a>
         </span>
+        <nz-badge nzStatus="processing" nzText={{greet}}></nz-badge>
       </div>
     </nz-header>
     <nz-content>

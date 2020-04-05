@@ -17,6 +17,7 @@ export class UserRegisterComponent implements OnInit {
   userRegisterForm = new FormGroup({
     id: new FormControl(),
     nickname: new FormControl(),
+    gender: new FormControl(),
     department: new FormControl(),
     privilege: new FormControl(),
     username: new FormControl(),
@@ -58,8 +59,9 @@ export class UserRegisterComponent implements OnInit {
     this.userRegisterForm = this.fb.group({
       id: [null, [Validators.required]],
       nickname: [null, [Validators.required]],
-      department: [null, []],
-      privilege: [null, []],
+      gender: ['男', []],
+      department: ['IOC', []],
+      privilege: [['用户管理', '表单管理'], []],
       username: [null, [Validators.required]],
       password: [null, [Validators.required, Validators.minLength(8)]],
       email: [null, [Validators.email, Validators.required]],
@@ -70,21 +72,22 @@ export class UserRegisterComponent implements OnInit {
   }
 
   // 接受子组件department的值
-  getDepartment(departmentValue) {
-    // console.log(departmentValue);
-    this.department = departmentValue;
-    // console.log(this.department);
-    // this.newUser.department = departmentValue;
-    // console.log(this.newUser.department);
-  }
+  // getDepartment(departmentValue) {
+  //   // console.log(departmentValue);
+  //   this.department = departmentValue;
+  //   // console.log(this.department);
+  //   // this.newUser.department = departmentValue;
+  //   // console.log(this.newUser.department);
+  // }
 
 
 
   onSubmit() {
+    // console.log(this.userRegisterForm.value);
     this.newUser = this.userRegisterForm.value;
     // this.newUser.department = this.department;
     // this.newUser.privilege = this.privilege;
-    console.log(this.newUser);
+    // console.log(this.newUser);
     this.userService.addNewUser(this.newUser).subscribe();
     this.userRegisterForm.reset();
     alert('添加员工成功！');

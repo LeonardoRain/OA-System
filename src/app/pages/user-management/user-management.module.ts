@@ -11,10 +11,12 @@ import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzSwitchModule } from 'ng-zorro-antd/switch';
 import { DepartmentSelectComponent } from './user-register/department-select/department-select.component';
 import { PrivilegeSelectComponent } from './user-register/privilege-select/privilege-select.component';
+import { SearchComponent } from './management/search/search.component';
+import { GenderSelectComponent } from './user-register/gender-select/gender-select.component';
 
 
 @NgModule({
-  declarations: [UserManagementComponent, UserRegisterComponent, ManagementComponent, DepartmentSelectComponent, PrivilegeSelectComponent],
+  declarations: [UserManagementComponent, UserRegisterComponent, ManagementComponent, DepartmentSelectComponent, PrivilegeSelectComponent, SearchComponent, GenderSelectComponent],
   imports: [
     CommonModule,
     UserManagementRoutingModule,

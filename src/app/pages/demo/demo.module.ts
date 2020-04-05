@@ -6,13 +6,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { DemoRoutingModule } from './demo-routing.module';
 import { DemoComponent } from './demo.component';
 import { LoginComponent } from './login/login.component';
-import { ChangePasswordComponent } from './change-password/change-password.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ChangePasswordComponent } from './change-password/change-password.component'
 import { WelcomeModule } from '../welcome/welcome.module';
+import { ResultFofComponent } from './result-fof/result-fof.component';
 
 
 @NgModule({
-  declarations: [DemoComponent, LoginComponent, ChangePasswordComponent, PageNotFoundComponent],
+  declarations: [DemoComponent, LoginComponent, ChangePasswordComponent, ResultFofComponent, ResultFofComponent],
   imports: [
     CommonModule,
     NgZorroAntdModule,

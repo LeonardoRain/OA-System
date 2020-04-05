@@ -1,15 +1,15 @@
 {
   "userList": [],
-  "users": [
-    {
+  "users": [{
       "id": 20200001,
       "nickname": "Leonardo",
+      "gender": "男",
       "department": "IOC",
       "privilege": [
         "用户管理",
         "表单管理"
       ],
-      "username": "Leonardo_Test",
+      "username": "Leonardo_Admin",
       "password": "12345678",
       "email": "987654321@qq.com",
       "phoneNumberPrefix": "+86",
@@ -19,6 +19,7 @@
     {
       "id": 20200002,
       "nickname": "Jessica",
+      "gender": "女",
       "department": "IOC",
       "privilege": [
         "用户管理",
@@ -34,6 +35,7 @@
     {
       "id": 20200003,
       "nickname": "Neo",
+      "gender": "男",
       "department": "IOC",
       "privilege": [
         "用户管理",
@@ -49,6 +51,7 @@
     {
       "id": 20200004,
       "nickname": "Tim",
+      "gender": "男",
       "department": "IOC",
       "privilege": [
         "用户管理",
@@ -64,6 +67,7 @@
     {
       "id": 20200005,
       "nickname": "Jacky",
+      "gender": "男",
       "department": "IOC",
       "privilege": [
         "用户管理",
@@ -79,6 +83,7 @@
     {
       "id": 20200006,
       "nickname": "Robbin",
+      "gender": "女",
       "department": "IOC",
       "privilege": [
         "用户管理",
@@ -94,6 +99,7 @@
     {
       "id": 20200007,
       "nickname": "Cory",
+      "gender": "女",
       "department": "IOC",
       "privilege": [
         "用户管理",
@@ -109,6 +115,7 @@
     {
       "id": 20200008,
       "nickname": "Lionel",
+      "gender": "女",
       "department": "IOC",
       "privilege": [
         "用户管理",
@@ -124,6 +131,7 @@
     {
       "id": 20200009,
       "nickname": "Roderick",
+      "gender": "男",
       "department": "IOC",
       "privilege": [
         "用户管理",
@@ -139,6 +147,7 @@
     {
       "id": 202000010,
       "nickname": "Aps",
+      "gender": "男",
       "department": "IOC",
       "privilege": [
         "用户管理",
@@ -154,6 +163,7 @@
     {
       "id": 20200011,
       "nickname": "Benny",
+      "gender": "女",
       "department": "IOC",
       "privilege": [
         "用户管理",
@@ -169,6 +179,7 @@
     {
       "id": 20200012,
       "nickname": "Bart",
+      "gender": "男",
       "department": "IOC",
       "privilege": [
         "用户管理",
@@ -184,6 +195,7 @@
     {
       "id": 20200013,
       "nickname": "Cora",
+      "gender": "女",
       "department": "IOC",
       "privilege": [
         "用户管理",
@@ -199,6 +211,7 @@
     {
       "id": 20200014,
       "nickname": "Vince",
+      "gender": "男",
       "department": "IOC",
       "privilege": [
         "用户管理",
@@ -214,6 +227,7 @@
     {
       "id": 20200066,
       "nickname": "Leo",
+      "gender": "男",
       "department": "IOC",
       "privilege": [
         "表单管理"
@@ -228,6 +242,7 @@
     {
       "id": 20200088,
       "nickname": "Rose",
+      "gender": "女",
       "department": "IOC",
       "privilege": [
         "用户管理",
@@ -243,8 +258,12 @@
     {
       "id": 20200089,
       "nickname": "Koa",
-      "department": null,
-      "privilege": null,
+      "gender": "男",
+      "department": "IOC",
+      "privilege": [
+        "用户管理",
+        "表单管理"
+      ],
       "username": "Koa_Test",
       "password": "12345678",
       "email": "Koa@qq.com",
@@ -255,8 +274,12 @@
     {
       "id": 20200044,
       "nickname": "Usb",
-      "department": null,
-      "privilege": null,
+      "gender": "男",
+      "department": "IOC",
+      "privilege": [
+        "用户管理",
+        "表单管理"
+      ],
       "username": "Usb_Test",
       "password": "12345678",
       "email": "lhd295497522@sina.com",
@@ -267,8 +290,12 @@
     {
       "id": 20200055,
       "nickname": "Pony",
-      "department": null,
-      "privilege": null,
+      "gender": "男",
+      "department": "IOC",
+      "privilege": [
+        "用户管理",
+        "表单管理"
+      ],
       "username": "Pony_Test",
       "password": "12345678",
       "email": "m13597885731@163.com",
@@ -279,8 +306,12 @@
     {
       "id": 20200099,
       "nickname": "李浩东",
-      "department": null,
-      "privilege": null,
+      "gender": "男",
+      "department": "IOC",
+      "privilege": [
+        "用户管理",
+        "表单管理"
+      ],
       "username": "Leonardo",
       "password": "3.1415926",
       "email": "295497522@qq.com",
@@ -291,13 +322,49 @@
     {
       "id": 20200100,
       "nickname": "托尼",
-      "department": null,
-      "privilege": null,
+      "gender": "男",
+      "department": "IOC",
+      "privilege": [
+        "用户管理",
+        "表单管理"
+      ],
       "username": "Tony_Stark",
       "password": "12345678",
       "email": "leonardorain@aliyun.com",
       "phoneNumberPrefix": "+86",
       "phoneNumber": "15927000170",
+      "agree": true
+    },
+    {
+      "id": 20200016,
+      "nickname": "陈奕迅",
+      "gender": "男",
+      "department": "IOC",
+      "privilege": [
+        "用户管理",
+        "表单管理"
+      ],
+      "username": "Eason",
+      "password": "12345678",
+      "email": "295497522@qq.com",
+      "phoneNumberPrefix": "+86",
+      "phoneNumber": "12342134214",
+      "agree": true
+    },
+    {
+      "id": 20200033,
+      "nickname": "梁朝伟",
+      "gender": "男",
+      "department": "IOC",
+      "privilege": [
+        "用户管理",
+        "表单管理"
+      ],
+      "username": "liangchaowei",
+      "password": "12345678",
+      "email": "285452136@qq.com",
+      "phoneNumberPrefix": "+86",
+      "phoneNumber": "15927000032",
       "agree": true
     }
   ]

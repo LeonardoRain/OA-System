@@ -93,6 +93,15 @@
         </nz-radio-group>
       </nz-form-control>
     </nz-form-item>
+    <!-- 搜索框 -->
+    <nz-form-item class="search">
+      <nz-input-group nzSearch [nzAddOnAfter]="suffixIconButton">
+        <input type="text" nz-input placeholder="请输入要查找的员工姓名" />
+      </nz-input-group>
+      <ng-template #suffixIconButton>
+        <button nz-button nzType="primary" nzSearch><i nz-icon nzType="search"></i></button>
+      </ng-template>
+    </nz-form-item>
   </form>
 </div>
 <!-- <p>{{listOfData.username}}</p> -->
@@ -106,9 +115,10 @@
       <th nzWidth="75px" nzShowCheckbox *ngIf="checkbox" [(nzChecked)]="allChecked" [nzIndeterminate]="indeterminate"
         (nzCheckedChange)="checkAll($event)"></th>
       <!-- 用户名  姓名  拥有权限  所在部门  电话  邮箱 -->
-      <th nzWidth="150px">员 工 编 号</th>
-      <th nzWidth="150px">用 户 名</th>
-      <th nzWidth="150px">姓 名</th>
+      <th nzWidth="100px">员 工 编 号</th>
+      <th nzWidth="125px">用 户 名</th>
+      <th nzWidth="125px">姓 名</th>
+      <th nzWidth="50px">性 别</th>
       <th nzWidth="100px">所 在 部 门</th>
       <th>拥 有 权 限</th>
       <th nzWidth="150px">电 话</th>
@@ -123,6 +133,7 @@
         <td>{{ data.id }}</td>
         <td>{{ data.username }}</td>
         <td>{{ data.nickname }}</td>
+        <td>{{ data.gender }}</td>
         <td>{{ data.department }}</td>
         <td>{{ data.privilege }}</td>
         <td>{{ data.phoneNumber }}</td>
