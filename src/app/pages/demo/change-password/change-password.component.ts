@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { NzMessageService } from 'ng-zorro-antd/message';
 import { FormBuilder, FormControl, FormGroup, ValidationErrors, Validators } from '@angular/forms';
 import { Observable, Observer } from 'rxjs';
 import { User } from '../../models/user.model';
@@ -29,6 +29,7 @@ export class ChangePasswordComponent {
     private fb: FormBuilder,
     private userService: UserService,
     private router: Router,
+    private message: NzMessageService
   ) {
     this.changePasswordForm = this.fb.group({
       userName: ['', [Validators.required], [this.userNameAsyncValidator]],
@@ -38,6 +39,14 @@ export class ChangePasswordComponent {
       phoneNumber: ['', [Validators.required, Validators.minLength(11)]],
       captcha: ['', [Validators.required]]  // 有待完善
     });
+  }
+
+  createSuccessMessage(): void {
+    this.message.create('success', `密码修改成功,请重新登陆！`);
+  }
+
+  createErrorMessage(): void {
+    this.message.create('error', `用户名与原密码或手机号不匹配!`);
   }
 
   checkOldPassword(users: User[]) {
@@ -52,7 +61,8 @@ export class ChangePasswordComponent {
           const inputNewPassword = { password: this.changePasswordForm.value.newPassword };
           this.changedUser = user;
           this.userService.changePassword(this.changedUser.id, inputNewPassword).subscribe(data => {
-            alert(`用户: ${this.changedUser.username}  密码修改成功,即将重新登陆！`);
+            // alert(`用户: ${this.changedUser.username}  密码修改成功,即将重新登陆！`);
+            this.createSuccessMessage();
             localStorage.removeItem('currentUser');
             this.router.navigate(['./login']);
           });
@@ -65,7 +75,8 @@ export class ChangePasswordComponent {
     if (flag) {
       this.changePasswordForm.reset();
     } else {
-      alert('用户名与原密码或手机号不匹配!');
+      // alert('用户名与原密码或手机号不匹配!');
+      this.createErrorMessage();
     }
   }
 

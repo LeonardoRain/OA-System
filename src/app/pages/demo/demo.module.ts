@@ -10,7 +10,6 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
 import { WelcomeModule } from '../welcome/welcome.module';
 import { ResultFofComponent } from './result-fof/result-fof.component';
 
-
 @NgModule({
   declarations: [DemoComponent, LoginComponent, ChangePasswordComponent, ResultFofComponent, ResultFofComponent],
   imports: [

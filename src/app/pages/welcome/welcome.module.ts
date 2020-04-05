@@ -11,6 +11,8 @@ import { RateComponent } from './rate/rate.component';
 import { IconsProviderModule } from 'src/app/home/icons-provider.module';
 import { CommonModule } from '@angular/common';
 import { CarouselComponent } from './carousel/carousel.component';
+import { MessagesComponent } from '../demo/messages/messages.component';
+import { LoadMessagesComponent } from '../demo/load-messages/load-messages.component';
 
 
 @NgModule({
@@ -23,7 +25,8 @@ import { CarouselComponent } from './carousel/carousel.component';
     FormsModule,
     WelcomeRoutingModule
   ],
-  declarations: [WelcomeComponent, DividerComponent, PageHeaderContentComponent, RateComponent, CarouselComponent],
+  // tslint:disable-next-line: max-line-length
+  declarations: [WelcomeComponent, DividerComponent, PageHeaderContentComponent, RateComponent, CarouselComponent, MessagesComponent, LoadMessagesComponent],
   exports: [DividerComponent, PageHeaderContentComponent]
 })
 export class WelcomeModule { }

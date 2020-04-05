@@ -1,6 +1,7 @@
 {
   "userList": [],
-  "users": [{
+  "users": [
+    {
       "id": 20200001,
       "nickname": "Leonardo",
       "gender": "男",
@@ -10,7 +11,7 @@
         "表单管理"
       ],
       "username": "Leonardo_Admin",
-      "password": "12345678",
+      "password": "123456789",
       "email": "987654321@qq.com",
       "phoneNumberPrefix": "+86",
       "phoneNumber": "15900000001",
@@ -365,6 +366,22 @@
       "email": "285452136@qq.com",
       "phoneNumberPrefix": "+86",
       "phoneNumber": "15927000032",
+      "agree": true
+    },
+    {
+      "id": 20200075,
+      "nickname": "王菲",
+      "gender": "男",
+      "department": "IOC",
+      "privilege": [
+        "用户管理",
+        "表单管理"
+      ],
+      "username": "wangfei",
+      "password": "123456789",
+      "email": "965854448@qq.com",
+      "phoneNumberPrefix": "+86",
+      "phoneNumber": "12342134214",
       "agree": true
     }
   ]

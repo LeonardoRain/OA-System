@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControlName, FormControl } from '@angular/forms';
+import { NzMessageService } from 'ng-zorro-antd/message';
+import { concatMap } from 'rxjs/operators';
 import { User } from '../../models/user.model';
 import { UserService } from '../../../services/user.service';
 import { Router } from '@angular/router';
@@ -23,7 +25,8 @@ export class LoginComponent implements OnInit {
     private fb: FormBuilder,
     private userService: UserService,
     private router: Router,
-    public authService: AuthService
+    public authService: AuthService,
+    private message: NzMessageService
   ) { }
 
   ngOnInit(): void {
@@ -32,6 +35,25 @@ export class LoginComponent implements OnInit {
       password: [null, [Validators.required, Validators.minLength(8)]],
       remember: [true]
     });
+  }
+
+  startShowMessages(): void {
+    // tslint:disable-next-line: no-non-null-assertion
+    this.message
+      .loading('正在登陆', { nzDuration: 500 })
+      .onClose!.pipe(
+        // tslint:disable-next-line: no-non-null-assertion
+        concatMap(() => this.message.success('登陆成功', { nzDuration: 2500 }).onClose!),
+        // tslint:disable-next-line: no-non-null-assertion
+        concatMap(() => this.message.info(`欢迎 ${this.loginUser.nickname}！`, { nzDuration: 2500 }).onClose!)
+      )
+      .subscribe(() => {
+        console.log('All completed!');
+      });
+  }
+
+  createErrorMessage(): void {
+    this.message.create('error', `用户名或密码不正确！`);
   }
 
   checkLogin(users: User[]) {
@@ -51,11 +73,12 @@ export class LoginComponent implements OnInit {
       }
     });
     if (flag) {
+      this.startShowMessages();
       console.log(`用户: <${this.loginUser.username}><${this.loginUser.id}> 登陆成功！`);
       this.authService.login(this.loginUser);
       this.router.navigate(['/home/welcome']);
     } else {
-      alert('用户名或密码错误！');
+      this.createErrorMessage();
     }
   }
 

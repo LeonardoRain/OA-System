@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { User } from '../../models/user.model';
 import { UserService } from '../../../services/user.service';
+import { NzMessageService } from 'ng-zorro-antd/message';
 
 @Component({
   selector: 'app-user-register',
@@ -52,7 +53,8 @@ export class UserRegisterComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private userService: UserService
+    private userService: UserService,
+    private message: NzMessageService
   ) { }
 
   ngOnInit(): void {
@@ -69,6 +71,10 @@ export class UserRegisterComponent implements OnInit {
       phoneNumber: [null, [Validators.required, Validators.minLength(11)]],
       agree: [false, [Validators.required]]
     });
+  }
+
+  createSuccessMessage(): void {
+    this.message.create('success', `添加员工成功！`);
   }
 
   // 接受子组件department的值
@@ -90,6 +96,7 @@ export class UserRegisterComponent implements OnInit {
     // console.log(this.newUser);
     this.userService.addNewUser(this.newUser).subscribe();
     this.userRegisterForm.reset();
-    alert('添加员工成功！');
+    // alert('添加员工成功！');
+    this.createSuccessMessage();
   }
 }
