@@ -22,7 +22,7 @@ export class UserService {
   }
 
   // 修改密码
-  changePassword(id: number, ModifiedInfo: string) {
+  changePassword(id: number, ModifiedInfo: object) {
     return this.http.patch<User>(`${this.usersApi}/${id}`, ModifiedInfo);
   }
 

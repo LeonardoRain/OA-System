@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators, FormControlName, FormControl } from
 import { User } from '../../models/user.model';
 import { UserService } from '../../../services/user.service';
 import { Router } from '@angular/router';
+import { AuthService } from '../../../services/auth/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -18,18 +19,11 @@ export class LoginComponent implements OnInit {
     password: new FormControl()
   });
 
-  submitForm(): void {
-    // tslint:disable-next-line: forin
-    for (const i in this.loginForm.controls) {
-      this.loginForm.controls[i].markAsDirty();
-      this.loginForm.controls[i].updateValueAndValidity();
-    }
-  }
-
   constructor(
     private fb: FormBuilder,
     private userService: UserService,
-    private router: Router
+    private router: Router,
+    public authService: AuthService
   ) { }
 
   ngOnInit(): void {
@@ -57,7 +51,8 @@ export class LoginComponent implements OnInit {
       }
     });
     if (flag) {
-      console.log(`用户:${this.loginUser.username}/${this.loginUser.id} 登陆成功！`);
+      console.log(`用户: <${this.loginUser.username}><${this.loginUser.id}> 登陆成功！`);
+      this.authService.login(this.loginUser);
       this.router.navigate(['/home/welcome']);
     } else {
       alert('用户名或密码错误！');
@@ -65,6 +60,12 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
+    // tslint:disable-next-line: forin
+    for (const i in this.loginForm.controls) {
+      this.loginForm.controls[i].markAsDirty();
+      this.loginForm.controls[i].updateValueAndValidity();
+    }
+
     const users$ = this.userService.index();
     users$.subscribe((data: User[]) => {
       this.users = data;

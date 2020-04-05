@@ -35,20 +35,6 @@ export class UserRegisterComponent implements OnInit {
     }
   }
 
-  // updateConfirmValidator(): void {
-  //   /** wait for refresh value */
-  //   Promise.resolve().then(() => this.userRegisterForm.controls.checkPassword.updateValueAndValidity());
-  // }
-
-  // confirmationValidator = (control: FormControl): { [s: string]: boolean } => {
-  //   if (!control.value) {
-  //     return { required: true };
-  //   } else if (control.value !== this.userRegisterForm.controls.password.value) {
-  //     return { confirm: true, error: true };
-  //   }
-  //   return {};
-  // }
-
   resetForm(e: MouseEvent): void {
     e.preventDefault();
     this.userRegisterForm.reset();
@@ -79,15 +65,15 @@ export class UserRegisterComponent implements OnInit {
       email: [null, [Validators.email, Validators.required]],
       phoneNumberPrefix: ['+86'],
       phoneNumber: [null, [Validators.required, Validators.minLength(11)]],
-      agree: [true]
+      agree: [false, [Validators.required]]
     });
   }
 
   // 接受子组件department的值
   getDepartment(departmentValue) {
-    console.log(departmentValue);
+    // console.log(departmentValue);
     this.department = departmentValue;
-    console.log(this.department);
+    // console.log(this.department);
     // this.newUser.department = departmentValue;
     // console.log(this.newUser.department);
   }

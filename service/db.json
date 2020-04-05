@@ -6,11 +6,11 @@
       "nickname": "Leonardo",
       "department": "IOC",
       "privilege": [
-        "账号管理",
+        "用户管理",
         "表单管理"
       ],
       "username": "Leonardo_Test",
-      "password": "123456789",
+      "password": "12345678",
       "email": "987654321@qq.com",
       "phoneNumberPrefix": "+86",
       "phoneNumber": "15900000001",
@@ -21,11 +21,11 @@
       "nickname": "Jessica",
       "department": "IOC",
       "privilege": [
-        "账号管理",
+        "用户管理",
         "表单管理"
       ],
       "username": "Jessica_Test",
-      "password": "123456789",
+      "password": "12345678",
       "email": "649134515@qq.com",
       "phoneNumberPrefix": "+86",
       "phoneNumber": "15900000002",
@@ -36,7 +36,7 @@
       "nickname": "Neo",
       "department": "IOC",
       "privilege": [
-        "账号管理",
+        "用户管理",
         "表单管理"
       ],
       "username": "Neo_Test",
@@ -51,7 +51,7 @@
       "nickname": "Tim",
       "department": "IOC",
       "privilege": [
-        "账号管理",
+        "用户管理",
         "表单管理"
       ],
       "username": "Tim_Test",
@@ -66,7 +66,7 @@
       "nickname": "Jacky",
       "department": "IOC",
       "privilege": [
-        "账号管理",
+        "用户管理",
         "表单管理"
       ],
       "username": "Jacky_Test",
@@ -81,7 +81,7 @@
       "nickname": "Robbin",
       "department": "IOC",
       "privilege": [
-        "账号管理",
+        "用户管理",
         "表单管理"
       ],
       "username": "Robbin_Test",
@@ -96,7 +96,7 @@
       "nickname": "Cory",
       "department": "IOC",
       "privilege": [
-        "账号管理",
+        "用户管理",
         "表单管理"
       ],
       "username": "Cory_Test",
@@ -111,7 +111,7 @@
       "nickname": "Lionel",
       "department": "IOC",
       "privilege": [
-        "账号管理",
+        "用户管理",
         "表单管理"
       ],
       "username": "Lionel_Test",
@@ -126,7 +126,7 @@
       "nickname": "Roderick",
       "department": "IOC",
       "privilege": [
-        "账号管理",
+        "用户管理",
         "表单管理"
       ],
       "username": "Roderick_Test",
@@ -141,7 +141,7 @@
       "nickname": "Aps",
       "department": "IOC",
       "privilege": [
-        "账号管理",
+        "用户管理",
         "表单管理"
       ],
       "username": "Aps_Test",
@@ -156,7 +156,7 @@
       "nickname": "Benny",
       "department": "IOC",
       "privilege": [
-        "账号管理",
+        "用户管理",
         "表单管理"
       ],
       "username": "Benny_Test",
@@ -171,7 +171,7 @@
       "nickname": "Bart",
       "department": "IOC",
       "privilege": [
-        "账号管理",
+        "用户管理",
         "表单管理"
       ],
       "username": "Bart_Test",
@@ -186,7 +186,7 @@
       "nickname": "Cora",
       "department": "IOC",
       "privilege": [
-        "账号管理",
+        "用户管理",
         "表单管理"
       ],
       "username": "Cora_Test",
@@ -201,7 +201,7 @@
       "nickname": "Vince",
       "department": "IOC",
       "privilege": [
-        "账号管理",
+        "用户管理",
         "表单管理"
       ],
       "username": "Vince_Test",
@@ -216,11 +216,10 @@
       "nickname": "Leo",
       "department": "IOC",
       "privilege": [
-        "账号管理",
         "表单管理"
       ],
       "username": "Leo_Test",
-      "password": "12345678",
+      "password": "3.1415926",
       "email": "987654321@qq.com",
       "phoneNumberPrefix": "+86",
       "phoneNumber": "15900000066",
@@ -231,7 +230,7 @@
       "nickname": "Rose",
       "department": "IOC",
       "privilege": [
-        "账号管理",
+        "用户管理",
         "表单管理"
       ],
       "username": "Rose_Test",
@@ -275,6 +274,30 @@
       "email": "m13597885731@163.com",
       "phoneNumberPrefix": "+86",
       "phoneNumber": "12342134214",
+      "agree": true
+    },
+    {
+      "id": 20200099,
+      "nickname": "李浩东",
+      "department": null,
+      "privilege": null,
+      "username": "Leonardo",
+      "password": "3.1415926",
+      "email": "295497522@qq.com",
+      "phoneNumberPrefix": "+86",
+      "phoneNumber": "15927000172",
+      "agree": true
+    },
+    {
+      "id": 20200100,
+      "nickname": "托尼",
+      "department": null,
+      "privilege": null,
+      "username": "Tony_Stark",
+      "password": "12345678",
+      "email": "leonardorain@aliyun.com",
+      "phoneNumberPrefix": "+86",
+      "phoneNumber": "15927000170",
       "agree": true
     }
   ]

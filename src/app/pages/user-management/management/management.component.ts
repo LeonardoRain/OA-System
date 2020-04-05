@@ -79,7 +79,6 @@ export class ManagementComponent implements OnInit {
     users$.subscribe((data: User[]) => {
       this.dataBefore = data;
       this.dataAfter = [];
-      // console.log(this.dataBefore);
       this.dataBefore.map(user => {
         this.dataAfter.push(Object.assign({}, user, {
           description: '广州市玄武无线科技股份有限公司',

@@ -16,25 +16,6 @@
           </li>
         </ul>
       </li>
-      <!-- 用户管理 -->
-      <li nz-submenu nzTitle="用户管理" nzIcon="team">
-        <ul>
-          <li nz-menu-item nzMatchRouter>
-            <a routerLink="/home/userManagement/management">账号管理</a>
-          </li>
-          <li nz-menu-item nzMatchRouter>
-            <a routerLink="/home/userManagement/userRegister">账号添加</a>
-          </li>
-        </ul>
-      </li>
-      <!-- 角色管理 -->
-      <li nz-submenu nzTitle="角色管理" nzIcon="idcard">
-        <ul>
-          <li nz-menu-item nzMatchRouter>
-            <a>更改角色</a>
-          </li>
-        </ul>
-      </li>
       <!-- 个人中心 ： 原Demo -->
       <li nz-submenu nzTitle="个人中心" nzIcon="experiment">
         <ul>
@@ -49,6 +30,32 @@
           </li>
         </ul>
       </li>
+      <!-- 用户管理 -->
+      <li nz-submenu nzTitle="用户管理" nzIcon="team">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/home/userManagement/management">账号管理</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/home/userManagement/userRegister">账号添加</a>
+          </li>
+        </ul>
+      </li>
+      <!-- 表单管理 -->
+      <li nz-submenu nzTitle="表单管理" nzIcon="idcard">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a>表单审核</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a>表单处理</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a>表单审批</a>
+          </li>
+        </ul>
+      </li>
+      <!-- 完 -->
     </ul>
   </nz-sider>
   <nz-layout>
@@ -57,11 +64,11 @@
         <span class="header-trigger" (click)="isCollapsed = !isCollapsed">
           <i class="trigger" nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"></i>
         </span>
-        <button nz-button nzType="primary" (click)="loadTwo()" [nzLoading]="isLoadingTwo">
+        <button nz-button nzType="primary" (click)="logout()" [nzLoading]="isLoading">
           <i nz-icon nzType="poweroff"></i>退出登陆
         </button>
         <span class="greeting">
-          上午好，<a class="greeting_name">{{CurrentUser.nickname}}</a>
+          {{greet}}<a class="greeting_name">{{CurrentUser.nickname}}</a>
         </span>
       </div>
     </nz-header>

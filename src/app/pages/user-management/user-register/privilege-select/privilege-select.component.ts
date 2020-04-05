@@ -10,9 +10,9 @@ export class PrivilegeSelectComponent {
   value: string[] = ['0-0-0'];
   nodes = [
     {
-      title: '账号管理',
+      title: '用户管理',
       value: '0-0',
-      key: '账号管理'
+      key: '用户管理'
     },
     {
       title: '表单管理',

@@ -99,7 +99,7 @@
 <nz-table #dynamicTable [nzScroll]="fixHeader ? { y: '240px' } : null" [nzData]="listOfData" [nzBordered]="bordered"
   [nzSimple]="simple" [nzLoading]="loading" [nzPaginationPosition]="position" [nzShowSizeChanger]="sizeChanger"
   [nzFrontPagination]="pagination" [nzShowPagination]="pagination" [nzFooter]="footer ? '附加功能' : null"
-  [nzTitle]="title ? '账号管理' : null" [nzSize]="size" (nzCurrentPageDataChange)="currentPageDataChange($event)">
+  [nzTitle]="title ? '用户管理' : null" [nzSize]="size" (nzCurrentPageDataChange)="currentPageDataChange($event)">
   <thead>
     <tr *ngIf="header">
       <th nzWidth="50px" nzShowExpand *ngIf="expandable"></th>
