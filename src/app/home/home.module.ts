@@ -11,12 +11,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { registerLocaleData } from '@angular/common';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import zh from '@angular/common/locales/zh';
+import { QiutButtonComponent } from './tools/qiut-button/qiut-button.component';
 
 
 registerLocaleData(zh);
 
 @NgModule({
-  declarations: [HomeComponent],
+  declarations: [HomeComponent, QiutButtonComponent],
   imports: [
     CommonModule,
     IconsProviderModule,

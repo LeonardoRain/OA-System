@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   public users: User[];
+  loginUser: User;
 
   loginForm = new FormGroup({
     username: new FormControl(),
@@ -47,6 +48,8 @@ export class LoginComponent implements OnInit {
       if (inputUsername === user.username) {
         if (inputPassword === user.password) {
           flag = true;
+          this.loginUser = user;
+          localStorage.setItem('currentUser', JSON.stringify(this.loginUser));
           return;
         } else {
           flag = false;
@@ -54,8 +57,8 @@ export class LoginComponent implements OnInit {
       }
     });
     if (flag) {
-      console.log('登陆成功！');
-      this.router.navigate(['./home/welcome']);
+      console.log(`用户:${this.loginUser.username}/${this.loginUser.id} 登陆成功！`);
+      this.router.navigate(['/home/welcome']);
     } else {
       alert('用户名或密码错误！');
     }

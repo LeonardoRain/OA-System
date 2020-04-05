@@ -21,7 +21,13 @@ export class UserService {
     return this.http.post<User>(this.usersApi, newUser);
   }
 
-  show(id: number) {
+  // 修改密码
+  changePassword(id: number, ModifiedInfo: string) {
+    return this.http.patch<User>(`${this.usersApi}/${id}`, ModifiedInfo);
+  }
+
+  getUserById(id: number) {
+    return this.http.get<User>(`${this.usersApi}/${id}`);
   }
 
 }

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { User } from '../models/user.model';
 
 @Component({
   selector: 'app-welcome',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./welcome.component.less']
 })
 export class WelcomeComponent implements OnInit {
+  @Input() getLoggedUser;
 
-  constructor() { }
+  loggedUserId: number;
+  loggedUser: User;
+
+  constructor(
+  ) { }
 
   ngOnInit() {
   }
-
 }

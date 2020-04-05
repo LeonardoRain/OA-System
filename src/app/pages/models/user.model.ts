@@ -8,7 +8,7 @@ export class User {
     public password: string,
     public email: string,
     public phoneNumberPrefix?: string,
-    public phoneNumber?: string,
+    public phoneNumber?: number,
     public agree?: boolean,
   ) { }
 }

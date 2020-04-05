@@ -2,8 +2,8 @@
   <nz-sider class="menu-sidebar" nzCollapsible nzWidth="256px" nzBreakpoint="md" [(nzCollapsed)]="isCollapsed"
     nzTheme="light">
     <div class="sidebar-logo">
-      <a routerLink="/">
-        <img src="../assets/images/webpack.png" style="border-radius: 4px;" routerLink="/">
+      <a routerLink="/home/welcome">
+        <img src="../assets/images/webpack.png" style="border-radius: 4px;" routerLink="/home/welcome">
         <h1>OA System</h1>
       </a>
     </div>
@@ -56,6 +56,12 @@
       <div class="app-header">
         <span class="header-trigger" (click)="isCollapsed = !isCollapsed">
           <i class="trigger" nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"></i>
+        </span>
+        <button nz-button nzType="primary" (click)="loadTwo()" [nzLoading]="isLoadingTwo">
+          <i nz-icon nzType="poweroff"></i>退出登陆
+        </button>
+        <span class="greeting">
+          上午好，<a class="greeting_name">{{CurrentUser.nickname}}</a>
         </span>
       </div>
     </nz-header>

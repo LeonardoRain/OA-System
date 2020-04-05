@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, ValidationErrors, Validators } from '@angular/forms';
 import { Observable, Observer } from 'rxjs';
 import { User } from '../../models/user.model';
+import { UserService } from '../../../services/user.service';
 
 @Component({
   selector: 'app-change-password',
@@ -11,7 +12,9 @@ import { User } from '../../models/user.model';
   styleUrls: ['./change-password.component.css']
 })
 export class ChangePasswordComponent {
-  public user: User;
+  changedUser: User;
+  users: User[];
+
 
   changePasswordForm = new FormGroup({
     username: new FormControl(),
@@ -22,13 +25,65 @@ export class ChangePasswordComponent {
     captcha: new FormControl()
   });
 
+  constructor(
+    private fb: FormBuilder,
+    private userService: UserService
+  ) {
+    this.changePasswordForm = this.fb.group({
+      userName: ['', [Validators.required], [this.userNameAsyncValidator]],
+      oldPassword: ['', [Validators.required, Validators.minLength(8)]],
+      newPassword: ['', [Validators.required, Validators.minLength(8)]],
+      confirm: ['', [this.confirmValidator]],
+      phoneNumber: ['', [Validators.required, Validators.minLength(11)]],
+      captcha: ['', [Validators.required]]  // 有待完善
+    });
+  }
+
+  checkOldPassword(users: User[]) {
+    const inputUsername = this.changePasswordForm.value.userName;
+    console.log(inputUsername);
+    const inputOldPassword = this.changePasswordForm.value.oldPassword;
+    console.log(inputOldPassword);
+    const inputPhoneNumber = this.changePasswordForm.value.phoneNumber;
+    let flag = false;
+    users.forEach(user => {
+      if (inputUsername === user.username) {
+        if (inputOldPassword === user.password) {
+          flag = true;
+          const newPassword = JSON.stringify({ password: this.changePasswordForm.value.newPassword });
+          this.changedUser = user;
+          console.log(this.changePasswordForm.value.newPassword);
+          console.log(this.changedUser.id);
+          console.log(newPassword);
+          this.userService.changePassword(this.changedUser.id, newPassword).subscribe(data => {
+            console.log(`用户:${this.changedUser.username}/${this.changedUser.id} 密码修改成功！`);
+            console.log(data);
+          });
+          return;
+        } else {
+          flag = false;
+        }
+      }
+    });
+    if (flag) {
+      // console.log(`用户:${this.changedUser.username}/${this.changedUser.id} 密码修改成功！`);
+      this.changePasswordForm.reset();
+    } else {
+      alert('用户名与原密码或手机号不匹配!');
+    }
+  }
+
   submitForm(value: any): void {
     // tslint:disable-next-line: forin
     for (const key in this.changePasswordForm.controls) {
       this.changePasswordForm.controls[key].markAsDirty();
       this.changePasswordForm.controls[key].updateValueAndValidity();
     }
-    console.log(value);
+    const users$ = this.userService.index();
+    users$.subscribe((data: User[]) => {
+      this.users = data;
+      this.checkOldPassword(this.users);
+    });
   }
 
   resetForm(e: MouseEvent): void {
@@ -69,16 +124,5 @@ export class ChangePasswordComponent {
 
   getCaptcha(e: MouseEvent): void {
     e.preventDefault();
-  }
-
-  constructor(private fb: FormBuilder) {
-    this.changePasswordForm = this.fb.group({
-      userName: ['', [Validators.required], [this.userNameAsyncValidator]],
-      oldPassword: ['', [Validators.required, Validators.minLength(8)]],
-      newPassword: ['', [Validators.required, Validators.minLength(8)]],
-      confirm: ['', [this.confirmValidator]],
-      phoneNumber: ['', [Validators.required, Validators.minLength(11)]],
-      captcha: ['', [Validators.required]]  // 有待完善
-    });
   }
 }
