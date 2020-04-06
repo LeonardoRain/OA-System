@@ -1,7 +1,5 @@
 {
-  "userList": [],
-  "users": [
-    {
+  "users": [{
       "id": 20200001,
       "nickname": "Leonardo",
       "gender": "男",
