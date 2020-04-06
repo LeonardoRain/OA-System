@@ -10,9 +10,10 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
 import { WelcomeModule } from '../welcome/welcome.module';
 import { ResultFofComponent } from './result-fof/result-fof.component';
 import { DrawerComponent } from './drawer/drawer.component';
+import { ForgetPasswordDrawerComponent } from './forget-password-drawer/forget-password-drawer.component';
 
 @NgModule({
-  declarations: [DemoComponent, LoginComponent, ChangePasswordComponent, ResultFofComponent, ResultFofComponent, DrawerComponent],
+  declarations: [DemoComponent, LoginComponent, ChangePasswordComponent, ResultFofComponent, ResultFofComponent, DrawerComponent, ForgetPasswordDrawerComponent],
   imports: [
     CommonModule,
     NgZorroAntdModule,

@@ -23,7 +23,8 @@
           <label nz-checkbox formControlName="remember">
             <span>记住我</span>
           </label>
-          <a class="login-form-forgot" class="login-form-forgot">忘记密码？</a>
+          <!-- <a class="login-form-forgot">忘记密码？</a> -->
+          <app-forget-password-drawer class="login-form-forgot"></app-forget-password-drawer>
           <button nz-button class="login-form-button" [nzType]="'primary'" [disabled]="!loginForm.valid"
             (click)="onSubmit()">登陆</button>
           或者
