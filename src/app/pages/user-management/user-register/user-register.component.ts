@@ -12,8 +12,10 @@ import { NzMessageService } from 'ng-zorro-antd/message';
 })
 export class UserRegisterComponent implements OnInit {
   public newUser: User;
+  public users: User[];
   public department: string;
   public privilege: string[];
+  public users$;
 
   userRegisterForm = new FormGroup({
     id: new FormControl(),
@@ -55,7 +57,12 @@ export class UserRegisterComponent implements OnInit {
     private fb: FormBuilder,
     private userService: UserService,
     private message: NzMessageService
-  ) { }
+  ) {
+    this.users$ = this.userService.index();
+    this.users$.subscribe((data: User[]) => {
+      this.users = data;
+    });
+  }
 
   ngOnInit(): void {
     this.userRegisterForm = this.fb.group({
@@ -73,8 +80,19 @@ export class UserRegisterComponent implements OnInit {
     });
   }
 
+  // 添加成功提示
   createSuccessMessage(): void {
     this.message.create('success', `添加员工成功，已经为该员工发送邮件！`);
+  }
+
+  // 员工id重复提示
+  createRepeatIdMessage(): void {
+    this.message.create('error', `员工编号已存在！`);
+  }
+
+  // 员工username重复提示
+  createRepeatUsernameMessage(): void {
+    this.message.create('error', `员工用户名已存在！`);
   }
 
   // 接受子组件department的值
@@ -86,17 +104,36 @@ export class UserRegisterComponent implements OnInit {
   //   // console.log(this.newUser.department);
   // }
 
+  // 检查新注册的员工编号是否与现存的账号有重复
+  checkNewUserId(newUser: User): boolean {
+    let flag = true;
+    this.users.forEach(user => {
+      if (newUser.id === user.id) {
+        this.createRepeatIdMessage();
+        flag = false;
+      }
+    });
+    return flag;
+  }
 
+  // 检查新注册的员工用户名是否与现存的账号有重复
+  checkNewUserUsername(newUser: User): boolean {
+    let flag = true;
+    this.users.forEach(user => {
+      if (newUser.username === user.username) {
+        this.createRepeatUsernameMessage();
+        flag = false;
+      }
+    });
+    return flag;
+  }
 
   onSubmit() {
-    // console.log(this.userRegisterForm.value);
     this.newUser = this.userRegisterForm.value;
-    // this.newUser.department = this.department;
-    // this.newUser.privilege = this.privilege;
-    // console.log(this.newUser);
-    this.userService.addNewUser(this.newUser).subscribe();
-    this.userRegisterForm.reset();
-    // alert('添加员工成功！');
-    this.createSuccessMessage();
+    if (this.checkNewUserId(this.newUser) && this.checkNewUserUsername(this.newUser)) {
+      this.userService.addNewUser(this.newUser).subscribe();
+      this.userRegisterForm.reset();
+      this.createSuccessMessage();
+    }
   }
 }

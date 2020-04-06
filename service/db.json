@@ -414,6 +414,22 @@
       "phoneNumberPrefix": "+86",
       "phoneNumber": "15927000185",
       "agree": true
+    },
+    {
+      "id": 202000041,
+      "nickname": "成龙",
+      "gender": "男",
+      "department": "IOC",
+      "privilege": [
+        "用户管理",
+        "表单管理"
+      ],
+      "username": "chenglong",
+      "password": "12345678",
+      "email": "yandong.cao@analyses.cn",
+      "phoneNumberPrefix": "+86",
+      "phoneNumber": "15927000185",
+      "agree": true
     }
   ]
 }
