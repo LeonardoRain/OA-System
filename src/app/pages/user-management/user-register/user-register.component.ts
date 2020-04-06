@@ -74,7 +74,7 @@ export class UserRegisterComponent implements OnInit {
   }
 
   createSuccessMessage(): void {
-    this.message.create('success', `添加员工成功！`);
+    this.message.create('success', `添加员工成功，已经为该员工发送邮件！`);
   }
 
   // 接受子组件department的值

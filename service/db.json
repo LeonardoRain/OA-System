@@ -1,5 +1,6 @@
 {
-  "users": [{
+  "users": [
+    {
       "id": 20200001,
       "nickname": "Leonardo",
       "gender": "男",
@@ -9,10 +10,25 @@
         "表单管理"
       ],
       "username": "Leonardo_Admin",
-      "password": "123456789",
+      "password": "3.1415926",
       "email": "987654321@qq.com",
       "phoneNumberPrefix": "+86",
       "phoneNumber": "15900000001",
+      "agree": true
+    },
+    {
+      "id": 20200066,
+      "nickname": "Leo",
+      "gender": "男",
+      "department": "IOC",
+      "privilege": [
+        "表单管理"
+      ],
+      "username": "Leo_Test",
+      "password": "12345678",
+      "email": "987654321@qq.com",
+      "phoneNumberPrefix": "+86",
+      "phoneNumber": "15900000066",
       "agree": true
     },
     {
@@ -224,21 +240,6 @@
       "agree": true
     },
     {
-      "id": 20200066,
-      "nickname": "Leo",
-      "gender": "男",
-      "department": "IOC",
-      "privilege": [
-        "表单管理"
-      ],
-      "username": "Leo_Test",
-      "password": "3.1415926",
-      "email": "987654321@qq.com",
-      "phoneNumberPrefix": "+86",
-      "phoneNumber": "15900000066",
-      "agree": true
-    },
-    {
       "id": 20200088,
       "nickname": "Rose",
       "gender": "女",
@@ -380,6 +381,38 @@
       "email": "965854448@qq.com",
       "phoneNumberPrefix": "+86",
       "phoneNumber": "12342134214",
+      "agree": true
+    },
+    {
+      "id": 20200025,
+      "nickname": "蔡徐坤",
+      "gender": "男",
+      "department": "IOC",
+      "privilege": [
+        "用户管理",
+        "表单管理"
+      ],
+      "username": "caixukun",
+      "password": "12345678",
+      "email": "caixukun@analyses.cn",
+      "phoneNumberPrefix": "+86",
+      "phoneNumber": "15927000175",
+      "agree": true
+    },
+    {
+      "id": 20200054,
+      "nickname": "林森",
+      "gender": "男",
+      "department": "IOC",
+      "privilege": [
+        "用户管理",
+        "表单管理"
+      ],
+      "username": "linsen",
+      "password": "12345678",
+      "email": "845125885@qq.com",
+      "phoneNumberPrefix": "+86",
+      "phoneNumber": "15927000185",
       "agree": true
     }
   ]
