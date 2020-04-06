@@ -1,0 +1,68 @@
+<a (click)="open()">现在注册！</a>
+<nz-drawer [nzBodyStyle]="{ height: 'calc(100% - 55px)', overflow: 'auto', 'padding-bottom': '53px' }"
+  [nzMaskClosable]="false" [nzWidth]="720" [nzVisible]="visible" nzTitle="请输入你希望创建的账号信息，它将发送至管理员" (nzOnClose)="close()">
+  <form nz-form>
+    <div nz-row nzGutter="8">
+      <div nz-col nzSpan="12">
+        <nz-form-item>
+          <nz-form-label>用户名</nz-form-label>
+          <nz-form-control>
+            <input nz-input placeholder="请输入你希望使用的用户名" />
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col nzSpan="12">
+        <nz-form-item>
+          <nz-form-label>密码</nz-form-label>
+          <nz-form-control>
+            <input nz-input placeholder="请输入你希望使用的密码" />
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+    </div>
+    <div nz-row nzGutter="8">
+      <div nz-col nzSpan="12">
+        <nz-form-item>
+          <nz-form-label>邮箱</nz-form-label>
+          <nz-form-control>
+            <input nz-input placeholder="请输入你希望绑定的邮箱" />
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col nzSpan="12">
+        <nz-form-item>
+          <nz-form-label>电话</nz-form-label>
+          <nz-form-control>
+            <input nz-input placeholder="请输入你希望绑定的手机号" />
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+    </div>
+    <div nz-row nzGutter="8">
+      <div nz-col nzSpan="12">
+        <nz-form-item>
+          <nz-form-label>真实姓名</nz-form-label>
+          <nz-form-control>
+            <input nz-input placeholder="请输入你的真实姓名" />
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+    </div>
+    <div nz-row nzGutter="8">
+      <div nz-col nzSpan="24">
+        <nz-form-item>
+          <nz-form-label>附加信息</nz-form-label>
+          <nz-form-control>
+            <textarea nz-input placeholder="请输入需要附加的信息" [nzAutosize]="{ minRows: 4, maxRows: 4 }"></textarea>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+    </div>
+  </form>
+  <br>
+  <div class="footer">
+    <span class="sa" nz-text nzDisabled>点击提交后，我们将向管理员提供您填写的数据，以供账号的生成</span>
+    <button type="button" (click)="close()" class="ant-btn" style="margin-right: 8px;"><span>取消</span></button>
+    <button type="button" (click)="close()" class="ant-btn ant-btn-primary"><span>提交</span></button>
+  </div>
+</nz-drawer>
