@@ -117,9 +117,4 @@ npm run aot
 
 `aot` 打包时，优化编译时对 ts 语法检查非常严谨，如果有错误就一个一个的去改，直到错误修改完成，`aot`打包才能通过
 
-# Contributors
-
-Thanks to everyone who contributed to the source code, comments, scripts, documentation, and test cases.
-<a href="https://github.com/FE-free/fc-angular/graphs/contributors"><img src="https://opencollective.com/fc-angular/contributors.svg?width=890" /></a>
-
-`.prettierrc`、`.editorconfig` 文件配置参考自 [ng.ant.design 官方源码](https://github.com/NG-ZORRO/ng-zorro-antd/blob/master/.editorconfig)
+`.prettierrc`、`.editorconfig` 文件配置参考自 [Ng-Zorro 官方源码](https://github.com/NG-ZORRO/ng-zorro-antd/blob/master/.editorconfig)
