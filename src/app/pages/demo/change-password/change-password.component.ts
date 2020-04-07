@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NzMessageService } from 'ng-zorro-antd/message';
 import { FormBuilder, FormControl, FormGroup, ValidationErrors, Validators } from '@angular/forms';
 import { Observable, Observer } from 'rxjs';
@@ -12,12 +12,12 @@ import { Router } from '@angular/router';
 
   styleUrls: ['./change-password.component.css']
 })
-export class ChangePasswordComponent {
+export class ChangePasswordComponent implements OnInit {
   changedUser: User;
   users: User[];
 
   changePasswordForm = new FormGroup({
-    username: new FormControl(),
+    userName: new FormControl(),
     oldPassword: new FormControl(),
     newPassword: new FormControl(),
     confirm: new FormControl(),
@@ -30,14 +30,27 @@ export class ChangePasswordComponent {
     private userService: UserService,
     private router: Router,
     private message: NzMessageService
-  ) {
+  ) { }
+
+  private contentValidators(reg: RegExp) {
+    const contentValidator = (control: FormControl): { [s: string]: boolean } => {
+      if (control.value && !control.value.match(reg)) {
+        return { matchErr: true, error: true };
+      } else {
+        return {};
+      }
+    };
+    return contentValidator;
+  }
+
+  ngOnInit(): void {
     this.changePasswordForm = this.fb.group({
-      userName: ['', [Validators.required], [this.userNameAsyncValidator]],
-      oldPassword: ['', [Validators.required, Validators.minLength(8)]],
-      newPassword: ['', [Validators.required, Validators.minLength(8)]],
-      confirm: ['', [this.confirmValidator]],
-      phoneNumber: ['', [Validators.required, Validators.minLength(11)]],
-      captcha: ['', [Validators.required]]  // 有待完善
+      userName: [null, [Validators.required, this.contentValidators(/^[a-zA-Z0-9_]{6,16}$/)]],
+      oldPassword: [null, [Validators.required, this.contentValidators(/^[\S]{6,16}$/)]],
+      newPassword: [null, [Validators.required, this.contentValidators(/^[\S]{6,16}$/)]],
+      confirm: [null, [this.confirmValidator]],
+      phoneNumber: ['', [Validators.required, this.contentValidators(/^(?:(?:\+|00)86)?1\d{10}$/)]],
+      captcha: [null, [Validators.required]]  // 有待完善
     });
   }
 

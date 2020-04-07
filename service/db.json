@@ -1,5 +1,6 @@
 {
-  "users": [{
+  "users": [
+    {
       "id": 20200001,
       "nickname": "Leonardo",
       "gender": "男",
@@ -9,7 +10,7 @@
         "表单管理"
       ],
       "username": "Leonardo_Admin",
-      "password": "3.1415926",
+      "password": "12345678",
       "email": "987654321@qq.com",
       "phoneNumberPrefix": "+86",
       "phoneNumber": 15900000001,

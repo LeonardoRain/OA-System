@@ -128,15 +128,6 @@ export class UserRegisterComponent implements OnInit {
     this.message.create('error', `员工用户名已存在！`);
   }
 
-  // 接受子组件department的值
-  // getDepartment(departmentValue) {
-  //   // console.log(departmentValue);
-  //   this.department = departmentValue;
-  //   // console.log(this.department);
-  //   // this.newUser.department = departmentValue;
-  //   // console.log(this.newUser.department);
-  // }
-
   // 检查新注册的员工编号是否与现存的账号有重复
   checkNewUserId(newUser: User): boolean {
     let flag = true;

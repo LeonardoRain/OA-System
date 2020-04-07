@@ -8,7 +8,7 @@
         <i nz-icon nz-tooltip nzTitle="员工编号唯一且为数字" nzType="question-circle" nzTheme="outline"></i>
       </span>
     </nz-form-label>
-    <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="请输入员工编号(纯数字且为8位)！">
+    <nz-form-control [nzSm]="14" [nzXs]="24" nzHasFeedback nzErrorTip="请输入员工编号(纯数字且为8位)！">
       <input nz-input type="text" id="id" formControlName="id" />
     </nz-form-control>
   </nz-form-item>
@@ -20,56 +20,56 @@
         <i nz-icon nz-tooltip nzTitle="员工的实际姓名" nzType="question-circle" nzTheme="outline"></i>
       </span>
     </nz-form-label>
-    <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="请输入员工姓名(20位之内)！">
+    <nz-form-control [nzSm]="14" [nzXs]="24" nzHasFeedback nzErrorTip="请输入员工姓名(20位之内)！">
       <input nz-input id="nickname" formControlName="nickname" />
     </nz-form-control>
   </nz-form-item>
   <!-- 性别 -->
   <nz-form-item>
     <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="gender" nzRequired>性别</nz-form-label>
-    <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="请选择性别！">
+    <nz-form-control [nzSm]="14" [nzXs]="24" nzHasFeedback nzErrorTip="请选择性别！">
       <app-gender-select (toParent)="getGender($event)"></app-gender-select>
     </nz-form-control>
   </nz-form-item>
   <!-- 部门及职位 -->
   <nz-form-item>
     <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="department" nzRequired>所在部门</nz-form-label>
-    <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="请选择员工所在部门！">
+    <nz-form-control [nzSm]="14" [nzXs]="24" nzHasFeedback nzErrorTip="请选择员工所在部门！">
       <app-department-select (toParent)="getDepartment($event)"></app-department-select>
     </nz-form-control>
   </nz-form-item>
   <!-- 员工权限 -->
   <nz-form-item>
     <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="department" nzRequired>员工权限</nz-form-label>
-    <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="请选择员工权限！">
+    <nz-form-control [nzSm]="14" [nzXs]="24" nzHasFeedback nzErrorTip="请选择员工权限！">
       <app-privilege-select (toParent)="getPrivilege($event)"></app-privilege-select>
     </nz-form-control>
   </nz-form-item>
   <!-- 员工账号 -->
   <nz-form-item>
     <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired>员工账号</nz-form-label>
-    <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="请输入员工账号(仅支持字母数字下划线,长度为6-16位)！">
+    <nz-form-control [nzSm]="14" [nzXs]="24" nzHasFeedback nzErrorTip="请输入员工账号(仅支持字母数字下划线,长度为6-16位)！">
       <input nz-input formControlName="username" placeholder="请输入员工账号" />
     </nz-form-control>
   </nz-form-item>
   <!-- 员工密码 -->
   <nz-form-item>
     <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="password" nzRequired>员工密码</nz-form-label>
-    <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="请输入员工密码(6-16位)！">
+    <nz-form-control [nzSm]="14" [nzXs]="24" nzHasFeedback nzErrorTip="请输入员工密码(6-16位)！">
       <input nz-input type="text" id="password" placeholder="请输入员工密码" formControlName="password" />
     </nz-form-control>
   </nz-form-item>
   <!-- 邮箱 -->
   <nz-form-item>
     <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="email">邮箱</nz-form-label>
-    <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="请输入一个合法的邮箱！">
+    <nz-form-control [nzSm]="14" [nzXs]="24" nzHasFeedback nzErrorTip="请输入一个合法的邮箱！">
       <input nz-input formControlName="email" id="email" />
     </nz-form-control>
   </nz-form-item>
   <!-- 员工手机号 -->
   <nz-form-item>
     <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="phoneNumber" nzRequired>员工手机号</nz-form-label>
-    <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="请输入正确的手机号(11位长度)">
+    <nz-form-control [nzSm]="14" [nzXs]="24" nzHasFeedback nzErrorTip="请输入正确的手机号(11位长度)">
       <nz-input-group [nzAddOnBefore]="addOnBeforeTemplate">
         <ng-template #addOnBeforeTemplate>
           <nz-select formControlName="phoneNumberPrefix" class="phone-select">

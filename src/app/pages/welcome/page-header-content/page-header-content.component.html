@@ -1,15 +1,19 @@
 <nz-page-header>
   <!--breadcrumb-->
   <nz-breadcrumb nz-page-header-breadcrumb>
-    <nz-breadcrumb-item>First-level Menu</nz-breadcrumb-item>
     <nz-breadcrumb-item>
-      <a>Second-level Menu</a>
+      <a>广州市</a>
     </nz-breadcrumb-item>
-    <nz-breadcrumb-item>Third-level Menu</nz-breadcrumb-item>
+    <nz-breadcrumb-item>
+      <a>天河区</a>
+    </nz-breadcrumb-item>
+    <nz-breadcrumb-item>
+      <a>体育西路</a>
+    </nz-breadcrumb-item>
   </nz-breadcrumb>
 
   <!--avatar-->
-  <nz-avatar nz-page-header-avatar nzSrc="https://avatars0.githubusercontent.com/u/22736418?s=88&v=4"> </nz-avatar>
+  <nz-avatar nz-page-header-avatar nzSrc="../../../../assets/images/IMG_9315.JPG"> </nz-avatar>
 
   <!--title-->
   <nz-page-header-title>{{CurrentUser.nickname}}</nz-page-header-title>
@@ -51,16 +55,17 @@
             办公自动化没有统一定义，凡是在传统的办公室中采用各种新技术、新机器、新设备从事办公业务，都属于办公自动化的领域。通过实现办公自动化，或者说实现数字化办公，可以优化现有的管理组织结构，调整管理体制，在提高效率的基础上，增加协同办公能力，强化决策的一致性。
           </p>
           <p class="content-link">
-            <a>
-              <img src="https://gw.alipayobjects.com/zos/rmsportal/MjEImQtenlyueSmVEfUD.svg" alt="start" />Quick
-              Start
+            <a class="svgItem">
+              <img src="https://gw.alipayobjects.com/zos/rmsportal/MjEImQtenlyueSmVEfUD.svg"
+                alt="email" />邮箱：{{CurrentUser.email}}
             </a>
-            <a>
-              <img src="https://gw.alipayobjects.com/zos/rmsportal/NbuDUAuBlIApFuDvWiND.svg" alt="info" />Product
-              Info
+            <a class="svgItem">
+              <img src="https://gw.alipayobjects.com/zos/rmsportal/NbuDUAuBlIApFuDvWiND.svg"
+                alt="phone" />电话：{{CurrentUser.phoneNumber}}
             </a>
-            <a>
-              <img src="https://gw.alipayobjects.com/zos/rmsportal/ohOEPSYdDTNnyMbGuyLb.svg" alt="doc" />Product Doc
+            <a class="svgItem">
+              <img src="https://gw.alipayobjects.com/zos/rmsportal/ohOEPSYdDTNnyMbGuyLb.svg" alt="doc" />产品文档：Product
+              Doc
             </a>
           </p>
         </div>
