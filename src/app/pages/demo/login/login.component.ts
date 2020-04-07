@@ -29,10 +29,21 @@ export class LoginComponent implements OnInit {
     private message: NzMessageService
   ) { }
 
+  private contentValidators(reg: RegExp) {
+    const contentValidator = (control: FormControl): { [s: string]: boolean } => {
+      if (control.value && !control.value.match(reg)) {
+        return { matchErr: true, error: true };
+      } else {
+        return {};
+      }
+    };
+    return contentValidator;
+  }
+
   ngOnInit(): void {
     this.loginForm = this.fb.group({
-      username: [null, [Validators.required]],
-      password: [null, [Validators.required, Validators.minLength(8)]],
+      username: [null, [Validators.required, this.contentValidators(/^[A-Za-z0-9_]{6,16}$/)]],
+      password: [null, [Validators.required, this.contentValidators(/^[\S]{6,16}$/)]],
       remember: [true]
     });
   }

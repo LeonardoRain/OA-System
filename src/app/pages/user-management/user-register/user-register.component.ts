@@ -13,6 +13,7 @@ import { NzMessageService } from 'ng-zorro-antd/message';
 export class UserRegisterComponent implements OnInit {
   public newUser: User;
   public users: User[];
+  public gender: string;
   public department: string;
   public privilege: string[];
   public users$;
@@ -39,9 +40,26 @@ export class UserRegisterComponent implements OnInit {
     }
   }
 
-  resetForm(e: MouseEvent): void {
-    e.preventDefault();
+  // 接收性别选择的值
+  getGender(e) {
+    this.gender = e;
+  }
+
+  // 接收部门选择的值
+  getDepartment(e) {
+    this.department = e;
+  }
+
+  // 接收部门选择的值
+  getPrivilege(e) {
+    this.privilege = e;
+  }
+
+  resetForm(): void {
     this.userRegisterForm.reset();
+    this.userRegisterForm.value.gender = null;
+    this.userRegisterForm.value.department = null;
+    this.userRegisterForm.value.privilege = null;
     // tslint:disable-next-line: forin
     for (const key in this.userRegisterForm.controls) {
       this.userRegisterForm.controls[key].markAsPristine();
@@ -64,18 +82,33 @@ export class UserRegisterComponent implements OnInit {
     });
   }
 
+  // 自定义表单验证
+  private contentValidators(reg: RegExp) {
+    const contentValidator = (control: FormControl): { [s: string]: boolean } => {
+      if (control.value && !control.value.match(reg)) {
+        return { matchErr: true, error: true };
+      } else {
+        return {};
+      }
+    };
+    return contentValidator;
+  }
+
   ngOnInit(): void {
     this.userRegisterForm = this.fb.group({
-      id: [null, [Validators.required]],
-      nickname: [null, [Validators.required]],
-      gender: ['男', []],
-      department: ['ICC', []],
-      privilege: [['用户管理', '表单管理'], []],
-      username: [null, [Validators.required]],
-      password: [null, [Validators.required, Validators.minLength(8)]],
-      email: [null, [Validators.email, Validators.required]],
+      id: [null, [Validators.required, this.contentValidators(/^[0-9]{8,8}$/)]],
+      nickname: [null, [Validators.required, this.contentValidators(/^[\S]{1,20}$/)]],
+      gender: [this.gender, []],
+      department: [null, []],
+      privilege: [null, []],
+      username: [null, [Validators.required, this.contentValidators(/^[A-Za-z0-9_]{6,16}$/)]],
+      password: [null, [Validators.required, this.contentValidators(/^[\S]{6,16}$/)]],
+      // tslint:disable-next-line: max-line-length
+      email: [null, [Validators.required, this.contentValidators(/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
+      )]],
       phoneNumberPrefix: ['+86'],
-      phoneNumber: [null, [Validators.required, Validators.minLength(11)]],
+      phoneNumber: [null, [Validators.required, this.contentValidators(/^(?:(?:\+|00)86)?1\d{10}$/
+      )]],
       agree: [false, [Validators.required]]
     });
   }
@@ -130,9 +163,13 @@ export class UserRegisterComponent implements OnInit {
 
   onSubmit() {
     this.newUser = this.userRegisterForm.value;
+    this.newUser.gender = this.gender;
+    this.newUser.department = this.department;
+    this.newUser.privilege = this.privilege;
+    console.log(this.newUser);
     if (this.checkNewUserId(this.newUser) && this.checkNewUserUsername(this.newUser)) {
       this.userService.addNewUser(this.newUser).subscribe();
-      this.userRegisterForm.reset();
+      this.resetForm();
       this.createSuccessMessage();
     }
   }

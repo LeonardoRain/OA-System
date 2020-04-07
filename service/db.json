@@ -1,5 +1,6 @@
 {
-  "users": [{
+  "users": [
+    {
       "id": 20200001,
       "nickname": "Leonardo",
       "gender": "男",
@@ -12,7 +13,7 @@
       "password": "3.1415926",
       "email": "987654321@qq.com",
       "phoneNumberPrefix": "+86",
-      "phoneNumber": "15900000001",
+      "phoneNumber": 15900000001,
       "agree": true
     },
     {
@@ -27,7 +28,7 @@
       "password": "12345678",
       "email": "987654321@qq.com",
       "phoneNumberPrefix": "+86",
-      "phoneNumber": "15900000066",
+      "phoneNumber": 15900000066,
       "agree": true
     },
     {
@@ -43,7 +44,7 @@
       "password": "12345678",
       "email": "649134515@qq.com",
       "phoneNumberPrefix": "+86",
-      "phoneNumber": "15900000002",
+      "phoneNumber": 15900000002,
       "agree": true
     },
     {
@@ -59,7 +60,7 @@
       "password": "12345678",
       "email": "159415466@qq.com",
       "phoneNumberPrefix": "+86",
-      "phoneNumber": "15900000003",
+      "phoneNumber": 15900000003,
       "agree": true
     },
     {
@@ -75,7 +76,7 @@
       "password": "12345678",
       "email": "892615878@qq.com",
       "phoneNumberPrefix": "+86",
-      "phoneNumber": "15900000004",
+      "phoneNumber": 15900000004,
       "agree": true
     },
     {
@@ -91,7 +92,7 @@
       "password": "12345678",
       "email": "679223168@qq.com",
       "phoneNumberPrefix": "+86",
-      "phoneNumber": "15900000005",
+      "phoneNumber": 15900000005,
       "agree": true
     },
     {
@@ -107,7 +108,7 @@
       "password": "12345678",
       "email": "854632158@qq.com",
       "phoneNumberPrefix": "+86",
-      "phoneNumber": "15900000006",
+      "phoneNumber": 15900000006,
       "agree": true
     },
     {
@@ -123,7 +124,7 @@
       "password": "12345678",
       "email": "94164854@qq.com",
       "phoneNumberPrefix": "+86",
-      "phoneNumber": "15900000007",
+      "phoneNumber": 15900000007,
       "agree": true
     },
     {
@@ -139,7 +140,7 @@
       "password": "12345678",
       "email": "965745813@qq.com",
       "phoneNumberPrefix": "+86",
-      "phoneNumber": "15900000008",
+      "phoneNumber": 15900000008,
       "agree": true
     },
     {
@@ -155,7 +156,7 @@
       "password": "12345678",
       "email": "15368429@qq.com",
       "phoneNumberPrefix": "+86",
-      "phoneNumber": "15900000009",
+      "phoneNumber": 15900000009,
       "agree": true
     },
     {
@@ -171,7 +172,7 @@
       "password": "12345678",
       "email": "125478563@qq.com",
       "phoneNumberPrefix": "+86",
-      "phoneNumber": "15900000010",
+      "phoneNumber": 15900000010,
       "agree": true
     },
     {
@@ -187,7 +188,7 @@
       "password": "12345678",
       "email": "41257695@qq.com",
       "phoneNumberPrefix": "+86",
-      "phoneNumber": "15900000011",
+      "phoneNumber": 15900000011,
       "agree": true
     },
     {
@@ -203,7 +204,7 @@
       "password": "12345678",
       "email": "247516856@qq.com",
       "phoneNumberPrefix": "+86",
-      "phoneNumber": "15900000012",
+      "phoneNumber": 15900000012,
       "agree": true
     },
     {
@@ -219,7 +220,7 @@
       "password": "12345678",
       "email": "85369524@qq.com",
       "phoneNumberPrefix": "+86",
-      "phoneNumber": "15900000013",
+      "phoneNumber": 15900000013,
       "agree": true
     },
     {
@@ -235,7 +236,7 @@
       "password": "12345678",
       "email": "965412563@qq.com",
       "phoneNumberPrefix": "+86",
-      "phoneNumber": "15900000014",
+      "phoneNumber": 15900000014,
       "agree": true
     },
     {
@@ -251,7 +252,7 @@
       "password": "12345678",
       "email": "Rose@qq.com",
       "phoneNumberPrefix": "+86",
-      "phoneNumber": "15900000088",
+      "phoneNumber": 15900000088,
       "agree": true
     },
     {
@@ -267,7 +268,7 @@
       "password": "12345678",
       "email": "Koa@qq.com",
       "phoneNumberPrefix": "+86",
-      "phoneNumber": "15900000089",
+      "phoneNumber": 15900000089,
       "agree": true
     },
     {
@@ -283,7 +284,7 @@
       "password": "12345678",
       "email": "lhd295497522@sina.com",
       "phoneNumberPrefix": "+86",
-      "phoneNumber": "12342134214",
+      "phoneNumber": 12342134214,
       "agree": true
     },
     {
@@ -299,7 +300,7 @@
       "password": "12345678",
       "email": "m13597885731@163.com",
       "phoneNumberPrefix": "+86",
-      "phoneNumber": "12342134214",
+      "phoneNumber": 12342134214,
       "agree": true
     },
     {
@@ -315,7 +316,7 @@
       "password": "3.1415926",
       "email": "295497522@qq.com",
       "phoneNumberPrefix": "+86",
-      "phoneNumber": "15927000172",
+      "phoneNumber": 15927000172,
       "agree": true
     },
     {
@@ -331,7 +332,7 @@
       "password": "12345678",
       "email": "leonardorain@aliyun.com",
       "phoneNumberPrefix": "+86",
-      "phoneNumber": "15927000170",
+      "phoneNumber": 15927000170,
       "agree": true
     },
     {
@@ -347,7 +348,7 @@
       "password": "12345678",
       "email": "295497522@qq.com",
       "phoneNumberPrefix": "+86",
-      "phoneNumber": "12342134214",
+      "phoneNumber": 12342134214,
       "agree": true
     },
     {
@@ -363,7 +364,7 @@
       "password": "12345678",
       "email": "285452136@qq.com",
       "phoneNumberPrefix": "+86",
-      "phoneNumber": "15927000032",
+      "phoneNumber": 15927000031,
       "agree": true
     },
     {
@@ -379,7 +380,7 @@
       "password": "123456789",
       "email": "965854448@qq.com",
       "phoneNumberPrefix": "+86",
-      "phoneNumber": "12342134214",
+      "phoneNumber": 12342134214,
       "agree": true
     },
     {
@@ -395,7 +396,7 @@
       "password": "12345678",
       "email": "caixukun@analyses.cn",
       "phoneNumberPrefix": "+86",
-      "phoneNumber": "15927000175",
+      "phoneNumber": 15927000175,
       "agree": true
     },
     {
@@ -411,7 +412,7 @@
       "password": "12345678",
       "email": "845125885@qq.com",
       "phoneNumberPrefix": "+86",
-      "phoneNumber": "15927000185",
+      "phoneNumber": 15927000185,
       "agree": true
     },
     {
@@ -427,7 +428,83 @@
       "password": "12345678",
       "email": "yandong.cao@analyses.cn",
       "phoneNumberPrefix": "+86",
-      "phoneNumber": "15927000185",
+      "phoneNumber": 15927000185,
+      "agree": true
+    },
+    {
+      "id": "20200059",
+      "nickname": "李然",
+      "gender": null,
+      "department": "ICC",
+      "privilege": [
+        "用户管理",
+        "表单管理"
+      ],
+      "username": "userliran",
+      "password": "123456789",
+      "email": "sdfsdfsdf522@qq.com",
+      "phoneNumberPrefix": "+86",
+      "phoneNumber": "12342134214",
+      "agree": true
+    },
+    {
+      "id": "20205541",
+      "nickname": "sdfsdf",
+      "gender": "男",
+      "department": "ICC",
+      "privilege": [
+        "用户管理",
+        "表单管理"
+      ],
+      "username": "sdfsdf",
+      "password": "sdfdsfdsf",
+      "email": "sdfsdfsdfds@qweqwe.com",
+      "phoneNumberPrefix": "+86",
+      "phoneNumber": "12342134214",
+      "agree": true
+    },
+    {
+      "id": "20200065",
+      "nickname": "LeonardoRain",
+      "gender": "男",
+      "department": "ICC",
+      "privilege": [
+        "用户管理",
+        "表单管理"
+      ],
+      "username": "sdfsdfdsf",
+      "password": "3424234",
+      "email": "295497522@qq.com",
+      "phoneNumberPrefix": "+86",
+      "phoneNumber": "12342134214",
+      "agree": true
+    },
+    {
+      "id": "20200031",
+      "nickname": "张曼玉",
+      "gender": "女",
+      "department": "ICC",
+      "privilege": [
+        "用户管理",
+        "表单管理"
+      ],
+      "username": "zhangmanyu",
+      "password": "3424234",
+      "email": "yandong.cao@analyses.cn",
+      "phoneNumberPrefix": "+86",
+      "phoneNumber": "15927000189",
+      "agree": false
+    },
+    {
+      "id": "20200061",
+      "nickname": "刘嘉玲",
+      "gender": "女",
+      "department": "生产计划部",
+      "username": "liujialing",
+      "password": "12345678",
+      "email": "85692452@qq.com",
+      "phoneNumberPrefix": "+86",
+      "phoneNumber": "15927000320",
       "agree": true
     }
   ]

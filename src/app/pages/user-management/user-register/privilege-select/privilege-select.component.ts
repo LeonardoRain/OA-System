@@ -1,12 +1,13 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, DoCheck, Output } from '@angular/core';
 
 @Component({
   selector: 'app-privilege-select',
   templateUrl: './privilege-select.component.html'
 })
-export class PrivilegeSelectComponent {
-  @Input()
-  privilege: string[];
+export class PrivilegeSelectComponent implements DoCheck {
+  @Output() toParent = new EventEmitter();
+
+  selectedPrivilege: string[];
   value: string[] = ['0-0-0'];
   nodes = [
     {
@@ -41,7 +42,12 @@ export class PrivilegeSelectComponent {
     }
   ];
 
-  onChange($event: string[]): void {
-    this.privilege = $event;
+  getPrivilege() {
+    // emit()里的参数就是要传递的值，toParent就是上面EventEmitter 实例化的对象名称toParent
+    this.toParent.emit(this.selectedPrivilege);
+  }
+
+  ngDoCheck(): void {
+    this.getPrivilege();
   }
 }

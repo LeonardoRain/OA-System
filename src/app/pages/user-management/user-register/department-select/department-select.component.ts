@@ -1,13 +1,14 @@
-import { Component, Input } from '@angular/core';
+import { Component, Output, EventEmitter, DoCheck } from '@angular/core';
 
 @Component({
   selector: 'app-department-select',
   templateUrl: './department-select.component.html'
 })
-export class DepartmentSelectComponent {
-  @Input() getDepartment;
-  // 这个value即为选中的节点的key值
-  value: string;
+export class DepartmentSelectComponent implements DoCheck {
+  department: string;
+
+  @Output() toParent = new EventEmitter();
+
   nodes = [
     {
       title: '生产中心',
@@ -61,7 +62,11 @@ export class DepartmentSelectComponent {
     }
   ];
 
-  sendDepartment() {
-    this.getDepartment(this.value);
+  getDepartment() {
+    this.toParent.emit(this.department);
+  }
+
+  ngDoCheck(): void {
+    this.getDepartment();
   }
 }

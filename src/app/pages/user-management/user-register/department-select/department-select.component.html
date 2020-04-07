@@ -1,5 +1,5 @@
 <!-- style="width: 250px; margin-top: 20px;" -->
-<nz-tree-select style="width: 350px" [(ngModel)]="value" [nzNodes]="nodes" nzPlaceHolder="请选择所在部门">
+<nz-tree-select style="width: 350px" [(ngModel)]="department" [nzNodes]="nodes" nzPlaceHolder="请选择所在部门">
   <ng-template #nzTreeTemplate let-node>
     <span class="ant-tree-node-content-wrapper" [class.ant-tree-node-selected]="node.isSelected">
       <span> <i nz-icon [nzType]="node.isExpanded ? 'folder-open' : 'folder'"></i> {{ node.title }} </span>

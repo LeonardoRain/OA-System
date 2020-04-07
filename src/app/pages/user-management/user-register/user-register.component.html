@@ -8,8 +8,8 @@
         <i nz-icon nz-tooltip nzTitle="员工编号唯一且为数字" nzType="question-circle" nzTheme="outline"></i>
       </span>
     </nz-form-label>
-    <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="请输入员工编号！">
-      <input nz-input type="number" id="id" formControlName="id" />
+    <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="请输入员工编号(纯数字且为8位)！">
+      <input nz-input type="text" id="id" formControlName="id" />
     </nz-form-control>
   </nz-form-item>
   <!-- 员工姓名 -->
@@ -20,7 +20,7 @@
         <i nz-icon nz-tooltip nzTitle="员工的实际姓名" nzType="question-circle" nzTheme="outline"></i>
       </span>
     </nz-form-label>
-    <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="请输入员工姓名！">
+    <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="请输入员工姓名(20位之内)！">
       <input nz-input id="nickname" formControlName="nickname" />
     </nz-form-control>
   </nz-form-item>
@@ -28,42 +28,34 @@
   <nz-form-item>
     <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="gender" nzRequired>性别</nz-form-label>
     <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="请选择性别！">
-      <app-gender-select formControlName="gender" ngDefaultControl></app-gender-select>
+      <app-gender-select (toParent)="getGender($event)"></app-gender-select>
     </nz-form-control>
   </nz-form-item>
   <!-- 部门及职位 -->
   <nz-form-item>
     <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="department" nzRequired>所在部门</nz-form-label>
     <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="请选择员工所在部门！">
-      <app-department-select ngDefaultControl formControlName="department"></app-department-select>
+      <app-department-select (toParent)="getDepartment($event)"></app-department-select>
     </nz-form-control>
   </nz-form-item>
   <!-- 员工权限 -->
   <nz-form-item>
     <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="department" nzRequired>员工权限</nz-form-label>
     <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="请选择员工权限！">
-      <app-privilege-select ngDefaultControl formControlName="privilege"></app-privilege-select>
+      <app-privilege-select (toParent)="getPrivilege($event)"></app-privilege-select>
     </nz-form-control>
   </nz-form-item>
   <!-- 员工账号 -->
   <nz-form-item>
     <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired>员工账号</nz-form-label>
-    <nz-form-control [nzSm]="14" [nzXs]="24" nzHasFeedback nzValidatingTip="验证中..." [nzErrorTip]="userErrorTpl">
+    <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="请输入员工账号(仅支持字母数字下划线,长度为6-16位)！">
       <input nz-input formControlName="username" placeholder="请输入员工账号" />
-      <ng-template #userErrorTpl let-control>
-        <ng-container *ngIf="control.hasError('required')">
-          员工账号是必需的！
-        </ng-container>
-        <ng-container *ngIf="control.hasError('duplicated')">
-          员工账号已存在！
-        </ng-container>
-      </ng-template>
     </nz-form-control>
   </nz-form-item>
   <!-- 员工密码 -->
   <nz-form-item>
     <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="password" nzRequired>员工密码</nz-form-label>
-    <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="请输入至少8位的员工密码！">
+    <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="请输入员工密码(6-16位)！">
       <input nz-input type="text" id="password" placeholder="请输入员工密码" formControlName="password" />
     </nz-form-control>
   </nz-form-item>
@@ -85,7 +77,7 @@
             <nz-option nzLabel="+87" nzValue="+87"></nz-option>
           </nz-select>
         </ng-template>
-        <input formControlName="phoneNumber" id="'phoneNumber'" nz-input />
+        <input type="text" formControlName="phoneNumber" id="'phoneNumber'" nz-input />
       </nz-input-group>
     </nz-form-control>
   </nz-form-item>
@@ -101,8 +93,7 @@
   <nz-form-item nz-row class="register-area">
     <nz-form-control [nzSpan]="14" [nzOffset]="6">
       <button nz-button nzType="primary" [disabled]="!userRegisterForm.valid" (click)="onSubmit()">确认注册</button>
-      <!-- <button nz-button nzType="primary" (click)="onSubmit()">确认注册</button> -->
-      <button nz-button (click)="resetForm($event)">重置表单</button>
+      <button nz-button (click)="resetForm()">重置表单</button>
     </nz-form-control>
   </nz-form-item>
 </form>
