@@ -16,7 +16,15 @@ import { GenderSelectComponent } from './user-register/gender-select/gender-sele
 
 
 @NgModule({
-  declarations: [UserManagementComponent, UserRegisterComponent, ManagementComponent, DepartmentSelectComponent, PrivilegeSelectComponent, SearchComponent, GenderSelectComponent],
+  declarations:
+    [UserManagementComponent,
+      UserRegisterComponent,
+      ManagementComponent,
+      DepartmentSelectComponent,
+      PrivilegeSelectComponent,
+      SearchComponent,
+      GenderSelectComponent
+    ],
   imports: [
     CommonModule,
     UserManagementRoutingModule,

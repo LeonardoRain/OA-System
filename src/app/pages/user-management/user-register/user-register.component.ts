@@ -94,13 +94,24 @@ export class UserRegisterComponent implements OnInit {
     return contentValidator;
   }
 
+  private selectValidators() {
+    const contentValidator = (control: FormControl): { [s: string]: boolean } => {
+      if (control.value) {
+        return { value: true };
+      } else {
+        return { value: false };
+      }
+    };
+    return contentValidator;
+  }
+
   ngOnInit(): void {
     this.userRegisterForm = this.fb.group({
       id: [null, [Validators.required, this.contentValidators(/^[0-9]{8,8}$/)]],
       nickname: [null, [Validators.required, this.contentValidators(/^[\S]{1,20}$/)]],
-      gender: [this.gender, []],
-      department: [null, []],
-      privilege: [null, []],
+      gender: [this.gender, [this.selectValidators]],
+      department: [null, [this.selectValidators]],
+      privilege: [null, [this.selectValidators]],
       username: [null, [Validators.required, this.contentValidators(/^[A-Za-z0-9_]{6,16}$/)]],
       password: [null, [Validators.required, this.contentValidators(/^[\S]{6,16}$/)]],
       // tslint:disable-next-line: max-line-length
