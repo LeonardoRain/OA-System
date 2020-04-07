@@ -7,7 +7,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## 1、项目介绍
 
 - 基于 AngularV8，Ng-Zorro 开发的后台管理系统
-- 【码云在线预览-国内访问更快】[http://perfect_l.gitee.io/fc-angular](http://perfect_l.gitee.io/fc-angular)
 - 【源码地址】[https://github.com/LeonardoRain/OA-System](https://github.com/LeonardoRain/OA-System)
 
 > 预览效果图 - 登录页
