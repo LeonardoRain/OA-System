@@ -68,6 +68,17 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 - 在浏览器中输入 `http://localhost:4200` ,项目启动成功, 在`package.json` 中可修改端口号
 - 查看 JsonServer 服务器登陆数据可访问 `http://localhost:3200/users`
+  样例登录信息：
+
+  ### 1 （管理员账户）
+
+  用户名: Leonardo_Admin
+  密码: 3.1415926
+
+  ### 2 （普通员工账户）
+
+  用户名: Leo_Test
+  密码: 12345678
 
 # 三、开发代码
 
@@ -75,7 +86,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## 1、 代码规范
 
-- 请按照 angular 官网提出的 `风格指南`  开发代码
+- 按照 angular 官网提出的 `风格指南`  开发代码
 
 【风格指南】[https://angular.cn/guide/styleguide#prevent-re-import-of-the-core-module](https://angular.cn/guide/styleguide#prevent-re-import-of-the-core-module)
 
