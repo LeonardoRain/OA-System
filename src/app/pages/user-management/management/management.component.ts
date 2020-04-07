@@ -35,14 +35,14 @@ export class ManagementComponent implements OnInit {
   displayData: any[];
   bordered = true;
   loading = false;
-  sizeChanger = false;
+  sizeChanger = true;
   pagination = true;
   header = true;
   title = true;
   footer = true;
   fixHeader = false;
   size = 'small';
-  expandable = false;
+  expandable = true;
   checkbox = true;
   allChecked = false;
   indeterminate = false;
