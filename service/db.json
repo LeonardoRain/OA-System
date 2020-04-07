@@ -1,6 +1,5 @@
 {
-  "users": [
-    {
+  "users": [{
       "id": 20200001,
       "nickname": "Leonardo",
       "gender": "男",
@@ -432,79 +431,50 @@
       "agree": true
     },
     {
-      "id": "20200059",
-      "nickname": "李然",
-      "gender": null,
-      "department": "ICC",
-      "privilege": [
-        "用户管理",
-        "表单管理"
-      ],
-      "username": "userliran",
-      "password": "123456789",
-      "email": "sdfsdfsdf522@qq.com",
-      "phoneNumberPrefix": "+86",
-      "phoneNumber": "12342134214",
-      "agree": true
-    },
-    {
-      "id": "20205541",
-      "nickname": "sdfsdf",
-      "gender": "男",
-      "department": "ICC",
-      "privilege": [
-        "用户管理",
-        "表单管理"
-      ],
-      "username": "sdfsdf",
-      "password": "sdfdsfdsf",
-      "email": "sdfsdfsdfds@qweqwe.com",
-      "phoneNumberPrefix": "+86",
-      "phoneNumber": "12342134214",
-      "agree": true
-    },
-    {
-      "id": "20200065",
-      "nickname": "LeonardoRain",
-      "gender": "男",
-      "department": "ICC",
-      "privilege": [
-        "用户管理",
-        "表单管理"
-      ],
-      "username": "sdfsdfdsf",
-      "password": "3424234",
-      "email": "295497522@qq.com",
-      "phoneNumberPrefix": "+86",
-      "phoneNumber": "12342134214",
-      "agree": true
-    },
-    {
-      "id": "20200031",
-      "nickname": "张曼玉",
-      "gender": "女",
-      "department": "ICC",
-      "privilege": [
-        "用户管理",
-        "表单管理"
-      ],
-      "username": "zhangmanyu",
-      "password": "3424234",
-      "email": "yandong.cao@analyses.cn",
-      "phoneNumberPrefix": "+86",
-      "phoneNumber": "15927000189",
-      "agree": false
-    },
-    {
       "id": "20200061",
       "nickname": "刘嘉玲",
       "gender": "女",
       "department": "生产计划部",
+      "privilege": [
+        "表单管理"
+      ],
       "username": "liujialing",
       "password": "12345678",
       "email": "85692452@qq.com",
       "phoneNumberPrefix": "+86",
       "phoneNumber": "15927000320",
+      "agree": true
+    },
+    {
+      "id": "20200047",
+      "nickname": "王圆",
+      "gender": "女",
+      "department": "采购部",
+      "privilege": [
+        "表单管理"
+      ],
+      "username": "wangyuan",
+      "password": "12345678",
+      "email": "wangyuan@analyses.cn",
+      "phoneNumberPrefix": "+86",
+      "phoneNumber": "15927011203",
+      "agree": true
+    },
+    {
+      "id": "20200091",
+      "nickname": "王力宏",
+      "gender": "男",
+      "department": "装备车间",
+      "privilege": [
+        "用户管理",
+        "表单处理",
+        "表单审批"
+      ],
+      "username": "wanglihong",
+      "password": "12345678",
+      "email": "wanglihong@analyses.cn",
+      "phoneNumberPrefix": "+86",
+      "phoneNumber": "19625143625",
       "agree": true
     }
   ]

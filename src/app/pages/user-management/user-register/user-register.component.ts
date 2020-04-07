@@ -166,7 +166,6 @@ export class UserRegisterComponent implements OnInit {
     this.newUser.gender = this.gender;
     this.newUser.department = this.department;
     this.newUser.privilege = this.privilege;
-    console.log(this.newUser);
     if (this.checkNewUserId(this.newUser) && this.checkNewUserUsername(this.newUser)) {
       this.userService.addNewUser(this.newUser).subscribe();
       this.resetForm();
