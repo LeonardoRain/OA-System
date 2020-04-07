@@ -69,7 +69,7 @@ export class UserRegisterComponent implements OnInit {
       id: [null, [Validators.required]],
       nickname: [null, [Validators.required]],
       gender: ['男', []],
-      department: ['IOC', []],
+      department: ['ICC', []],
       privilege: [['用户管理', '表单管理'], []],
       username: [null, [Validators.required]],
       password: [null, [Validators.required, Validators.minLength(8)]],

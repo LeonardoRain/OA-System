@@ -1,0 +1,30 @@
+<ng-template #template>
+  <div class="ant-notification-notice-content">
+    <div class="ant-notification-notice-with-icon">
+      <span class="ant-notification-notice-icon"><i nz-icon nzType="smile" style="color: rgb(16, 142, 233);"></i></span>
+      <div class="ant-notification-notice-message">预设账户</div>
+      <div class="ant-notification-notice-description">
+        <span nz-text nzType="secondary">
+          <a class="accountExample">管理员用户</a>
+        </span>
+        <br>
+        <span nz-text><code>账号:</code></span><span nz-text nzType="secondary">Leonardo_Admin</span>
+        <br>
+        <span nz-text><code>密码:</code></span><span nz-text nzType="secondary">3.1415926</span>
+      </div>
+      <br>
+      <div class="ant-notification-notice-description">
+        <span nz-text nzType="secondary">
+          <a class="accountExample">普通用户</a>
+        </span>
+        <br>
+        <span nz-text><code>账号:</code></span><span nz-text nzType="secondary">Leo_Test</span>
+        <br>
+        <span nz-text><code>密码:</code></span><span nz-text nzType="secondary">12345678</span>
+      </div>
+    </div>
+  </div>
+</ng-template>
+<button nz-button [nzType]="'primary'" (click)="createBasicNotification(template)">
+  查看预设账户
+</button>
