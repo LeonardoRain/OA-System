@@ -1,4 +1,4 @@
-# OASystem
+# OA-System
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.7.
 
@@ -73,7 +73,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
   ### 1 （管理员账户）
 
   用户名: Leonardo_Admin
-  密码: 3.1415926
+  密码: 12345678
 
   ### 2 （普通员工账户）
 
