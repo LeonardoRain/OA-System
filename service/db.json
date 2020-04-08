@@ -1,10 +1,9 @@
 {
-  "users": [
-    {
+  "users": [{
       "id": 20200001,
       "nickname": "Leonardo",
       "gender": "男",
-      "department": "ICC",
+      "department": "生产计划部",
       "privilege": [
         "用户管理",
         "表单管理"
@@ -20,7 +19,7 @@
       "id": 20200066,
       "nickname": "Leo",
       "gender": "男",
-      "department": "ICC",
+      "department": "原材料库",
       "privilege": [
         "表单管理"
       ],
@@ -35,7 +34,7 @@
       "id": 20200002,
       "nickname": "Jessica",
       "gender": "女",
-      "department": "ICC",
+      "department": "生产计划部",
       "privilege": [
         "用户管理",
         "表单管理"
@@ -51,7 +50,7 @@
       "id": 20200003,
       "nickname": "Neo",
       "gender": "男",
-      "department": "ICC",
+      "department": "原材料库",
       "privilege": [
         "用户管理",
         "表单管理"
@@ -67,7 +66,7 @@
       "id": 20200004,
       "nickname": "Tim",
       "gender": "男",
-      "department": "ICC",
+      "department": "生产计划部",
       "privilege": [
         "用户管理",
         "表单管理"
@@ -83,7 +82,7 @@
       "id": 20200005,
       "nickname": "Jacky",
       "gender": "男",
-      "department": "ICC",
+      "department": "原材料库",
       "privilege": [
         "用户管理",
         "表单管理"
@@ -99,7 +98,7 @@
       "id": 20200006,
       "nickname": "Robbin",
       "gender": "女",
-      "department": "ICC",
+      "department": "生产计划部",
       "privilege": [
         "用户管理",
         "表单管理"
@@ -115,7 +114,7 @@
       "id": 20200007,
       "nickname": "Cory",
       "gender": "女",
-      "department": "ICC",
+      "department": "生产计划部",
       "privilege": [
         "用户管理",
         "表单管理"
@@ -131,7 +130,7 @@
       "id": 20200008,
       "nickname": "Lionel",
       "gender": "女",
-      "department": "ICC",
+      "department": "原材料库",
       "privilege": [
         "用户管理",
         "表单管理"
@@ -147,7 +146,7 @@
       "id": 20200009,
       "nickname": "Roderick",
       "gender": "男",
-      "department": "ICC",
+      "department": "生产计划部",
       "privilege": [
         "用户管理",
         "表单管理"
@@ -163,7 +162,7 @@
       "id": 202000010,
       "nickname": "Aps",
       "gender": "男",
-      "department": "ICC",
+      "department": "生产计划部",
       "privilege": [
         "用户管理",
         "表单管理"
@@ -179,7 +178,7 @@
       "id": 20200011,
       "nickname": "Benny",
       "gender": "女",
-      "department": "ICC",
+      "department": "原材料库",
       "privilege": [
         "用户管理",
         "表单管理"
@@ -195,7 +194,7 @@
       "id": 20200012,
       "nickname": "Bart",
       "gender": "男",
-      "department": "ICC",
+      "department": "生产计划部",
       "privilege": [
         "用户管理",
         "表单管理"
@@ -211,7 +210,7 @@
       "id": 20200013,
       "nickname": "Cora",
       "gender": "女",
-      "department": "ICC",
+      "department": "原材料库",
       "privilege": [
         "用户管理",
         "表单管理"
@@ -227,7 +226,7 @@
       "id": 20200014,
       "nickname": "Vince",
       "gender": "男",
-      "department": "ICC",
+      "department": "生产计划部",
       "privilege": [
         "用户管理",
         "表单管理"
@@ -243,7 +242,7 @@
       "id": 20200088,
       "nickname": "Rose",
       "gender": "女",
-      "department": "ICC",
+      "department": "生产计划部",
       "privilege": [
         "用户管理",
         "表单管理"
@@ -259,7 +258,7 @@
       "id": 20200089,
       "nickname": "Koa",
       "gender": "男",
-      "department": "ICC",
+      "department": "原材料库",
       "privilege": [
         "用户管理",
         "表单管理"
@@ -275,7 +274,7 @@
       "id": 20200044,
       "nickname": "Usb",
       "gender": "男",
-      "department": "ICC",
+      "department": "生产计划部",
       "privilege": [
         "用户管理",
         "表单管理"
@@ -291,7 +290,7 @@
       "id": 20200055,
       "nickname": "Pony",
       "gender": "男",
-      "department": "ICC",
+      "department": "生产计划部",
       "privilege": [
         "用户管理",
         "表单管理"
@@ -307,7 +306,7 @@
       "id": 20200099,
       "nickname": "李浩东",
       "gender": "男",
-      "department": "ICC",
+      "department": "原材料库",
       "privilege": [
         "用户管理",
         "表单管理"
@@ -323,7 +322,7 @@
       "id": 20200100,
       "nickname": "托尼",
       "gender": "男",
-      "department": "ICC",
+      "department": "生产计划部",
       "privilege": [
         "用户管理",
         "表单管理"
@@ -339,7 +338,7 @@
       "id": 20200016,
       "nickname": "陈奕迅",
       "gender": "男",
-      "department": "ICC",
+      "department": "生产计划部",
       "privilege": [
         "用户管理",
         "表单管理"
@@ -355,7 +354,7 @@
       "id": 20200033,
       "nickname": "梁朝伟",
       "gender": "男",
-      "department": "ICC",
+      "department": "原材料库",
       "privilege": [
         "用户管理",
         "表单管理"
@@ -371,7 +370,7 @@
       "id": 20200075,
       "nickname": "王菲",
       "gender": "男",
-      "department": "ICC",
+      "department": "生产计划部",
       "privilege": [
         "用户管理",
         "表单管理"
@@ -387,7 +386,7 @@
       "id": 20200025,
       "nickname": "蔡徐坤",
       "gender": "男",
-      "department": "ICC",
+      "department": "原材料库",
       "privilege": [
         "用户管理",
         "表单管理"
@@ -403,7 +402,7 @@
       "id": 20200054,
       "nickname": "林森",
       "gender": "男",
-      "department": "ICC",
+      "department": "生产计划部",
       "privilege": [
         "用户管理",
         "表单管理"
@@ -419,7 +418,7 @@
       "id": 202000041,
       "nickname": "成龙",
       "gender": "男",
-      "department": "ICC",
+      "department": "原材料库",
       "privilege": [
         "用户管理",
         "表单管理"
@@ -476,6 +475,22 @@
       "email": "wanglihong@analyses.cn",
       "phoneNumberPrefix": "+86",
       "phoneNumber": "19625143625",
+      "agree": true
+    },
+    {
+      "id": "20200039",
+      "nickname": "李连杰",
+      "gender": "男",
+      "department": "毛胚库",
+      "privilege": [
+        "用户管理",
+        "表单管理"
+      ],
+      "username": "lilianjie",
+      "password": "12345678",
+      "email": "4684564648@qq.com",
+      "phoneNumberPrefix": "+86",
+      "phoneNumber": "15927000039",
       "agree": true
     }
   ]
